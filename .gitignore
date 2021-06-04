@@ -1,0 +1,14 @@
+/.config/*
+!/.config/alacritty
+!/.config/fish
+!/.config/gtk*
+!/.config/mako
+!/.config/sway
+!/.config/swaylock
+!/.config/waybar
+!/.config/menus
+!/.config/nvim
+!/.config/pipewire
+!/.config/wofi
+!/.config/pipewire
+!/.config/ranger
