@@ -39,7 +39,7 @@ plugins=(
 # ALIASES
 alias spring="cd ~/PAPKA/GUIDES/Spring/SpringGB"
 alias cfg="cd ~/.config"
-alias aur="cd ~/hm/AUR"
+# alias aur="cd ~/hm/AUR"
 alias psqld="sudo systemctl start postgresql"
 alias gmvn="mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes
 -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4"
@@ -47,6 +47,9 @@ alias pclip="xclip"
 alias gclip="xclip -o"
 alias awmenu="curl -s https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/icon-list.txt | rofi -dmenu -i -markup-rows -p "" -columns 6 -width 100 -location 1 -lines 20 -bw 2 -yoffset -2 | cut -d\' -f2"
 alias dckd="sudo systemctl start docker"
+alias vim="nvim"
+alias tr="wl-paste | trans -b -t $1"
+#alias aur="curl https://aur.archlinux.org/packages.gz | gzip -cd"
 #alias idea-ce="DRI_PRIME=1 idea"
 
 # ENV
@@ -57,7 +60,6 @@ source $ZSH/oh-my-zsh.sh
 # must be here
 alias lls="ls -la --group-directories-first -h -S"
 alias ll="ls -la --group-directories-first"
-alias vim="nvim"
 
 ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/owpk/.sdkman"
