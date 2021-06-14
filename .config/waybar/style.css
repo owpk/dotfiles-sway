@@ -41,11 +41,11 @@ nord15 #b48ead
 /* Reset all styles */
 * {
     color: #eceff4;
-    border: 0;
+    border: none;
     border-radius: 0;
     padding: 0 0;
-    font-family:UbuntuMono;
-    font-size: 15px;
+    font-family:Hack;
+    font-size: 13px;
    }
 
 window#waybar {
@@ -53,12 +53,18 @@ window#waybar {
     background: shade(alpha(@borders, 0.9), 2.25);
 }
 
+#workspaces {
+   padding: 0;
+   margin: 0;
+}
+
 #workspaces button {
-    border-bottom: 2px;
     color: #eceff4;
+    min-height: 0;
     border-color: shade(alpha(@borders, 0.9), 2.25);
-    border-style: solid;
-    padding: 0 10px;
+    padding: 0 7px;
+    margin: 0;
+    border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
@@ -105,6 +111,7 @@ window#waybar {
 }
 
 #custom-launcher,#custom-power{
+    font-size: 13px;
     border-style: hidden;
 }
 
@@ -114,7 +121,7 @@ window#waybar {
 
 #custom-launcher {
    background-color: #2e3440;
-   font-size: 17px;
+   font-size: 13px;
 }
 
 #custom-arrowL0 {
@@ -124,7 +131,7 @@ window#waybar {
 
 #window{
     border-style: hidden;
-    margin-top:1px;
+    /* margin-top:1px; */
 }
 
 #mode{
@@ -142,54 +149,4 @@ window#waybar {
 #network.disabled {
     color:#bf616a;
 }
-
-/*
-#clock {
- color:#a3be8c;
-}
-
-#backlight {
-    color: #ebcb8b;
-}
-
-#battery {
-    color: #d8dee9;
-}
-
-#battery.charging {
-    color: #81a1c1;
-}
-#cpu {
-    color:#a3be8c ;
-}
-
-#memory {
-    color: #d3869b;
-}
-
-#network{
-    color:#a3be8c;
-}
-
-#network.disconnected {
-    color: #bf616a;
-}
-
-#pulseaudio {
-    color: #b48ead;
-}
-
-#temperature {
-    color: #8fbcbb;
-}
-
-
-#idle_inhibitor {
-   color: #ebcb8b;
-}
-
-#custom-keyboard-layout{
-   color:#d08770;
-}
-*/
 

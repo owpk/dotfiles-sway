@@ -22,12 +22,15 @@
 		      "10": "10",
         }
     },
+
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
+
     "sway/window": {
         "format": "{}"
     },
+
     "idle_inhibitor": {
         "format": "{icon}",
        "format-icons": {
@@ -35,10 +38,12 @@
             "deactivated": ""
         }
     },
+
     "tray": {
-        "icon-size": 20,
+        "icon-size": 15,
         "spacing": 5
     },
+
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
         "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
@@ -129,7 +134,7 @@
      },
 
      "custom/launcher": {
-    	   "format":"| owpk ",
+    	   "format":"| owpk",
     	   "on-click": "exec nwggrid",
     	   "tooltip": false,
      },

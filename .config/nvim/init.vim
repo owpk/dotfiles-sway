@@ -70,11 +70,6 @@ set cursorline                          " Enable highlighting of the current lin
 " Splits open at the bottom and right, unlike vim defaults.
 	set splitbelow splitright
 
-" Nerd tree
-	map <leader>n :NERDTreeToggle<CR>
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-	let NERDTreeMinimalUI = 1
-	let NERDTreeDirArrows = 1
 " vimling:
 	nm <leader>d :call ToggleDeadKeys()<CR>
 	imap <leader>d <esc>:call ToggleDeadKeys()<CR>a
@@ -147,7 +142,7 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 
 " Enable folding
-	set foldmethod=indent
+" set foldmethod=indent
 
 " Rust autofmt on save
 	let g:rustfmt_autosave = 1
