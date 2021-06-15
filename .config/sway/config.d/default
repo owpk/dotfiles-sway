@@ -7,6 +7,7 @@ set $down j
 set $up k
 set $right l
 
+set $term alacritty
 set $term-float alacritty
 set $menu wofi -c ~/.config/wofi/config -I
 set $launcher nwggrid
@@ -25,22 +26,22 @@ set $cheat gedit ~/.config/sway/cheatsheet
 
 ### Key bindings
 
-bindsym $mod+slash         split vertical; exec alacritty
-bindsym $mod+apostrophe		split horizontal; exec alacritty
+bindsym $mod+slash         split vertical; exec $term
+bindsym $mod+apostrophe		split horizontal; exec $term
 
 bindsym $mod+Tab           exec --no-startup-id wofi -show window
 bindsym $mod+Shift+Tab     workspace next
 bindsym $mod+backslash     workspace back_and_forth
 
 # space
-bindsym $mod+space         exec --no-startup-id makoctl history-pop
-bindsym $mod+Shift+space   exec --no-startup-id makoctl close
+bindsym $mod+space         exec --no-startup-id makoctl restore
+bindsym $mod+Shift+space   exec --no-startup-id makoctl dismiss -g
 
 ## reload
 bindsym $mod+f1            reload
 
 # Start a floating terminal
-bindsym $mod+Return        exec $term-float
+bindsym $mod+Return        exec $term
 bindsym $mod+Shift+Return	exec $term --working-directory=$(pwd)
 
 # a
@@ -52,7 +53,7 @@ bindsym $mod+a             focus parent
 
 # d
 bindsym $mod+d             exec $menu
-# bindsym $mod+Shift+d       exec $launcher
+bindsym $mod+Shift+d       exec $launcher
 
 # e
 bindsym $mod+e             exec ~/.config/sway/scripts/translate.sh ru
@@ -190,11 +191,19 @@ bindsym --whole-window --border $mod+shift+button4 resize shrink width 5 px or 5
 bindsym --whole-window --border $mod+shift+button5 resize grow width 5 px or 5 ppt
 
 #
-# Volume
 #
-bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
-bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
-bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
+# bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
+# bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
+# bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
+
+# Volume
+   bindsym XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+   bindsym XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+   bindsym XF86AudioMute         exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+
+# Backlight
+   bindsym XF86MonBrightnessUp   exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -r
+   bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -d
 
 #
 # Player
@@ -204,10 +213,9 @@ bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
 #
-# Backlight
 #
-    bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
-    bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
+#    bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
+#    bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
 #
 # App shortcuts
 #
@@ -218,4 +226,3 @@ bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo
 #
     bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
-

@@ -49,8 +49,8 @@ nord15 #b48ead
    }
 
 window#waybar {
-    /* background:#2e3440; */
-    background: shade(alpha(@borders, 0.9), 2.25);
+    background:#2e3440;
+    /* background: shade(alpha(@borders, 0.9), 2.25); */
 }
 
 #workspaces {
@@ -68,11 +68,11 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-color: #81a1c1;
+    border-color: #8db0AE;
 }
 
 #workspaces button.urgent {
-    background: #bf616a;
+    background: #bf616A;
     color: #eceff4;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -116,17 +116,21 @@ window#waybar {
 }
 
 #tray {
-   background-color: #2e3440
+   background-color: #8db0AE;
+   color: #2e3440;
+   padding: 0 5px;
 }
 
 #custom-launcher {
-   background-color: #2e3440;
+   background-color: #8db0AE;
    font-size: 13px;
+   color: #2e3440;
 }
 
 #custom-arrowL0 {
    background-color: #2e3440;
-   color: shade(alpha(@borders, 1.0), 2.25);
+   /* color: shade(alpha(@borders, 1.0), 2.25); */
+   color: #8db0AE;
 }
 
 #window{

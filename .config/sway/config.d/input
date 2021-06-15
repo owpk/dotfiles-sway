@@ -1,10 +1,10 @@
 input type:touchpad {
       dwt enabled
       tap enabled
-      natural_scroll enabled
+      natural_scroll disable
 }
 
-# to find out input identifier use "swaymsg -t get_inputs"
+# to find keyboard identifier use "swaymsg -t get_inputs"
 input "1:1:AT_Translated_Set_2_keyboard" {
    repeat_delay 250
    repeat_rate 50

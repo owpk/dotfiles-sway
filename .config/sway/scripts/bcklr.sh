@@ -1,15 +1,15 @@
 #!/bin/bash
 char=$1
-dir="/sys/class/backlight/amdgpu_bl1/brightness" 
-delta=20
+dir="/sys/class/backlight/amdgpu_bl1/brightness"
+delta=10
 val=$(cat $dir)
 
-if  [ $char = "-d" ] 
+if  [[ $char == "-d" ]]
    then
       val=$(( $val - $delta ))
-elif [ $char = "-r" ]
-   then 
+elif [[ $char == "-r" ]]
+   then
       val=$(( $val + $delta ))
 fi
 
-echo $val > $dir 
+echo $val > $dir

@@ -1,5 +1,6 @@
 # set floating (nontiling)for apps needing it:
 for_window [class="Yad" instance="yad"] floating enable
+for_window [app_id="thunar"] floating enable
 for_window [app_id="yad"] floating enable
 for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
 
