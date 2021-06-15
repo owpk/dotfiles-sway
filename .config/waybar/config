@@ -4,7 +4,7 @@
     "height": 10,
 
     "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
-
+    //"modules-center": ["custom/spotify", "custom/play", "custom/pause"],
     "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "clock", "custom/power"],
 
     "sway/workspaces": {
@@ -114,6 +114,24 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
+    },
+
+    "custom/spotify": {
+        "tooltip": false,
+        "exec": "$HOME/.config/waybar/scripts/spotify.sh",
+        "format": " {}"
+    },
+
+    "custom/play": {
+        "tooltip": false,
+        "on-click": "playerctl --player=spotify play",
+        "format": " pl"
+    },
+
+    "custom/pause": {
+        "tooltip": false,
+        "on-click": "playerctl --player=spotify pause",
+        "format": " ||"
     },
 
    "custom/pacman": {
