@@ -17,4 +17,4 @@ echo "owpk ALL=(ALL) ALL" >> /etc/sudoers
 pacman -S networkmanager network-manager-applet wireless_tools wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr
 systemctl enable NetworkManager.service
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-gurb-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
