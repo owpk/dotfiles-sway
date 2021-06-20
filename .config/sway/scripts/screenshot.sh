@@ -1,18 +1,20 @@
 #!/bin/bash
- 
-entries="Active Screen Output Area Window"
- 
-selected=$(printf '%s\n' $entries | wofi --style=$HOME/.config/wofi/style.widgets.css --conf=$HOME/.config/wofi/config.screenshot | awk '{print tolower($1)}')
- 
-case $selected in
-  active)
-    /usr/share/sway/scripts/grimshot --notify save active;;
-  screen)
-    /usr/share/sway/scripts/grimshot --notify save screen;;
-  output)
-    /usr/share/sway/scripts/grimshot --notify save output;;
-  area)
-    /usr/share/sway/scripts/grimshot --notify save area;;
-  window)
-    /usr/share/sway/scripts/grimshot --notify save window;;
-esac
+SCREEN_DIR=$(xdg-user-dir PICTURES)
+FILENAME="screenshot-`date +%F-%T`"
+TARGET=$SCREEN_DIR/$FILENAME.png
+SLURP_FROMAT="%x,%y %wx%h"
+
+notif() {
+   notify-send -t 5000 "SCREENSHOT SAVED" $1
+}
+
+if [[ $1 == '-g' ]]
+then
+   grim -g "$(slurp -d)" $TARGET
+   notif $TARGET
+else
+   grim $TARGET
+   notif $TARGET
+fi
+
+cat $TARGET | wl-copy
