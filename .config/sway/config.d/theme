@@ -1,7 +1,7 @@
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 
-output "*" bg ~/dotfiles-sway/wallpapers/pixel.jpg fill
+output "*" bg ~/dotfiles-sway/wallpapers/windows-11-wallpaper-1.jpg fill
 
 # Set inner/outer gaps
 gaps inner 5

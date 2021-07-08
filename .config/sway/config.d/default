@@ -26,23 +26,23 @@ set $cheat gedit ~/.config/sway/cheatsheet
 
 ### Key bindings
 
+## reload
+bindsym $mod+f1            reload
+
 bindsym $mod+slash         split vertical; exec $term
 bindsym $mod+apostrophe		split horizontal; exec $term
 
-bindsym $mod+Tab           exec --no-startup-id wofi -show window
 bindsym $mod+Shift+Tab     workspace next
 bindsym $mod+backslash     workspace back_and_forth
-
-# space
-bindsym $mod+space         exec --no-startup-id makoctl restore
-bindsym $mod+Shift+space   exec --no-startup-id makoctl dismiss -g
-
-## reload
-bindsym $mod+f1            reload
+bindsym $mod+Tab           exec ~/.config/sway/scripts/wswitch.sh
 
 # Start a floating terminal
 bindsym $mod+Return        exec $term
 bindsym $mod+Shift+Return	exec $term --working-directory=$(pwd)
+
+# space
+bindsym $mod+space         exec --no-startup-id makoctl restore
+bindsym $mod+Shift+space   exec --no-startup-id makoctl dismiss -a
 
 # a
 # Move focus to the parent container
@@ -87,8 +87,8 @@ bindsym $mod+v             layout tabbed
 bindsym $mod+w             exec ~/.config/sway/scripts/chrom.sh
 
 # y
-bindsym $mod+y			   exec --no-startup-id flameshot gui -p ~/screenshots
-bindsym $mod+Shift+y	   exec --no-startup-id flameshot full -p ~/screenshots
+bindsym $mod+y			      exec  ~/.config/sway/scripts/screenshot.sh
+bindsym $mod+Shift+y			exec  ~/.config/sway/scripts/screenshot.sh -g
 
 floating_modifier $mod     normal
 
