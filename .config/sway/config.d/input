@@ -5,7 +5,9 @@ input type:touchpad {
 }
 
 # to find keyboard identifier use "swaymsg -t get_inputs"
+
 input "1:1:AT_Translated_Set_2_keyboard" {
+# input "6700:3620:SEM_USB_Keyboard" {
    repeat_delay 250
    repeat_rate 50
    xkb_layout "us,ru"

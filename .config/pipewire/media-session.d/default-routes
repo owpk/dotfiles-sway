@@ -1,9 +1,0 @@
-{
-  "default.route.alsa_card.pci-0000_01_00.1:profile:off": [ ],
-  "default.route.alsa_card.pci-0000_04_00.1:profile:off": [ ],
-  "default.route.alsa_card.pci-0000_00_1f.3:profile:off": [ ],
-  "default.route.alsa_card.pci-0000_01_00.1:profile:output:hdmi-stereo-extra3": [ "hdmi-output-3" ],
-  "default.route.alsa_card.pci-0000_01_00.1:output:hdmi-output-3": { "mute": false, "volumes": [ 0.154645, 0.154645 ], "channels": [ "FL", "FR" ] },
-  "default.route.alsa_card.usb-Sony_Interactive_Entertainment_Wireless_Controller-00:profile:off": [ ],
-  "default.route.alsa_card.usb-Sony_Interactive_Entertainment_Wireless_Controller-00:profile:output:analog-stereo+input:mono-fallback": [ ]
-}
