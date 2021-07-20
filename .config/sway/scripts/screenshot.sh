@@ -1,7 +1,7 @@
 #!/bin/bash
 SCREEN_DIR=$(xdg-user-dir PICTURES)
 FILENAME="screenshot-`date +%F-%T`"
-TARGET=$SCREEN_DIR/$FILENAME.png
+TARGET=$SCREEN_DIR/$FILENAME.jpg
 SLURP_FROMAT="%x,%y %wx%h"
 
 notif() {
