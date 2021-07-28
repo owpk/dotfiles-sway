@@ -3,5 +3,6 @@ KEYBOARD=`swaymsg -t get_inputs | grep -i keyboard | grep -i identifier | sed 's
 TARGET="$HOME/.config/sway/config.d/input"
 CONF="$HOME/.config/sway/keyboard.conf"
 
-echo "input: $KEYBOARD {" > $TARGET
+echo "#keyboard settings was preloaded by $HOME/.config/sway/scipts/startup_config.sh script" > $TARGET
+echo "input $KEYBOARD {" >> $TARGET
 cat $CONF >> $TARGET
