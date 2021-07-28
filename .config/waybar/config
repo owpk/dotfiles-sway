@@ -44,14 +44,6 @@
         "spacing": 5
     },
 
-    "custom/weather": {
-         "format": "{}",
-         "tooltip": true,
-         "interval": 3600,
-         "exec": "/home/owpk/.config/waybar/scripts/waybar-wttr.py",
-         "return-type": "json"
-    },
-
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
         //"format": " {:%a %d %b  %I:%M %p}",	//12 hour format
@@ -124,6 +116,21 @@
         "on-click": "pavucontrol"
     },
 
+     "custom/launcher": {
+    	   "format":"| {} ",
+    	   "on-click": "exec nwggrid",
+    	   "tooltip": false,
+         "exec" : "echo $USER"
+     },
+
+    "custom/weather": {
+         "format": "{}",
+         "tooltip": true,
+         "interval": 3600,
+         "exec": "/home/owpk/.config/waybar/scripts/waybar-wttr.py",
+         "return-type": "json"
+    },
+
     "custom/spotify": {
         "tooltip": false,
         "exec": "$HOME/.config/waybar/scripts/spotify.sh",
@@ -164,12 +171,6 @@
          "format": " {}",
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh  '1:1:AT_Translated_Set_2_keyboard'"
          //"exec": "$HOME/.config/waybar/scripts/kblayout.sh '6700:3620:SEM_USB_Keyboard'"
-     },
-
-     "custom/launcher": {
-    	   "format":"| owpk ",
-    	   "on-click": "exec nwggrid",
-    	   "tooltip": false,
      },
 
      "custom/arrowL0": {
