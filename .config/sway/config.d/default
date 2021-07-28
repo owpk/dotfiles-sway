@@ -15,6 +15,10 @@ set $powermenu nwgbar
 set $cheat gedit ~/.config/sway/cheatsheet
 set $filemanager nautilus
 
+# wob
+set $WOBSOCKET $XDG_RUNTIME_DIR/wob.sock
+exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
+
 ### Idle configuration
 # exec swayidle -w\
 #    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
@@ -193,37 +197,35 @@ bindsym --to-code  --whole-window --border $mod+shift+button5 resize grow width 
 
 #
 #
-# bindsym --to-code  XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
-# bindsym --to-code  XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
-# bindsym --to-code  XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
 
 # Volume
-   bindsym --to-code  XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-   bindsym --to-code  XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-   bindsym --to-code  XF86AudioMute         exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+   # bindsym --to-code  XF86AudioRaiseVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+   # bindsym --to-code  XF86AudioLowerVolume  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+   # bindsym --to-code  XF86AudioMute         exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+
+   #wob
+   bindsym --to-code  XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
+   bindsym --to-code  XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
+   bindsym --to-code  XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
 
 # Backlight
-   bindsym --to-code  XF86MonBrightnessUp   exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -r
-   bindsym --to-code  XF86MonBrightnessDown exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -d
+   #wob
+   bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+   bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
 
-#
+   # bindsym --to-code  XF86MonBrightnessUp   exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -r
+   # bindsym --to-code  XF86MonBrightnessDown exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -d
+
 # Player
-#
     bindsym XF86AudioPlay exec playerctl play
     bindsym XF86AudioPause exec playerctl pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-#
-#
-#    bindsym --to-code  XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
-#    bindsym --to-code  XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
-#
+
 # App shortcuts
-#
     bindsym --to-code  $mod+n exec $filemanager
     bindsym --to-code  $mod+o exec firedragon
-#
+
 # Screenshots
-#
     bindsym --to-code  print exec /usr/share/sway/scripts/grimshot --notify save output
     bindsym --to-code  Shift+print exec ~/.config/sway/scripts/screenshot.sh
