@@ -1,3 +1,6 @@
+exec $HOME/.config/startup_config.sh
+exec wmname LG3D
+
 # Auth with polkit-gnome:
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 

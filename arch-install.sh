@@ -26,7 +26,7 @@ echo "owpk ALL=(ALL) ALL" >> /etc/sudoers
 
 pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
 wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh \
-vifm papirus-icon-theme noto-fonts-emoji ttf-hack
+vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp grim
 
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service

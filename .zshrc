@@ -55,8 +55,6 @@ alias hs="history | grep $1"
 # ENV
 source $ZSH/oh-my-zsh.sh
 # source /usr/share/autojump/autojump.zsh
-export _JAVA_AWT_WM_NONREPARENTING=1
-# wmname LG3D
 
 # must be here
 alias lls="ls -la --group-directories-first -h -S"
