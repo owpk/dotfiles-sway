@@ -5,7 +5,7 @@
 
     "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
     //"modules-center": ["custom/spotify", "custom/play", "custom/pause"],
-    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "clock", "custom/power"],
+    "modules-right": ["custom/keyboard-layout", "custom/weather", "backlight", "memory", "battery", "network", "pulseaudio", "clock", "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -42,6 +42,14 @@
     "tray": {
         "icon-size": 15,
         "spacing": 5
+    },
+
+    "custom/weather": {
+         "format": "{}",
+         "tooltip": true,
+         "interval": 3600,
+         "exec": "/home/owpk/.config/waybar/scripts/waybar-wttr.py",
+         "return-type": "json"
     },
 
     "clock": {
@@ -153,7 +161,7 @@
     "custom/keyboard-layout": {
       	"tooltip": false,
          "on-click": "~/.config/waybar/scripts/keyhint.sh",
-         "format": "  {}",
+         "format": " {}",
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh  '1:1:AT_Translated_Set_2_keyboard'"
          //"exec": "$HOME/.config/waybar/scripts/kblayout.sh '6700:3620:SEM_USB_Keyboard'"
      },
