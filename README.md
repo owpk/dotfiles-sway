@@ -18,7 +18,7 @@ cd dotfiles-sway
 ```
 3. change shell to zsh
 ```
-chsh -s /bin/zsh owpk
+chsh -s /bin/zsh $USER
 ```
 4. install zsh utils
 ```
