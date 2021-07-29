@@ -23,8 +23,8 @@ chsh -s /bin/zsh $USER
 4. install zsh utils
 - type exit when ohmyzsh wil be installed (first plugin)
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && \
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 5. create all needed links and copy fonts
@@ -43,7 +43,7 @@ ln -s `pwd`/.vim ~/.vim
 ```
 6. insatll aurutils
 ```
-git clone https://aur.archlinux.org/aurutils.git && \
+git clone https://aur.archlinux.org/aurutils.git
 cd aurutils
 makepkg -si
 ```
@@ -51,32 +51,34 @@ makepkg -si
 7. configure custom pacman repository
 ```
 CUSTOM=/etc/pacman.d/custom
-sudo touch $CUSTOM && \
-sudo echo '[options]' >> $CUSTOM  && \
-sudo echo 'CacheDir = /var/cache/pacman/pkg' >> $CUSTOM  && \
-sudo echo 'CacheDir = /var/cache/pacman/custom' >> $CUSTOM  && \
-sudo echo 'CleanMethod = KeepCurrent' >> $CUSTOM  && \
-sudo echo '[custom]' >> $CUSTOM  && \
-sudo echo 'SigLevel = Optional TrustAll' >> $CUSTOM  && \
-sudo echo 'Server = file:///var/cache/pacman/custom' >> $CUSTOM  && \
-sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf  && \
-install -d /var/cache/pacman/custom -o $USER  && \
-repo-add /var/cache/pacman/custom/custom.db.tar && \
+sudo touch $CUSTOM
+sudo echo '[options]' >> $CUSTOM
+sudo echo 'CacheDir = /var/cache/pacman/pkg' >> $CUSTOM
+sudo echo 'CacheDir = /var/cache/pacman/custom' >> $CUSTOM
+sudo echo 'CleanMethod = KeepCurrent' >> $CUSTOM
+sudo echo '[custom]' >> $CUSTOM
+sudo echo 'SigLevel = Optional TrustAll' >> $CUSTOM
+sudo echo 'Server = file:///var/cache/pacman/custom' >> $CUSTOM
+sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+install -d /var/cache/pacman/custom -o $USER
+repo-add /var/cache/pacman/custom/custom.db.tar
 sudo pacman -Syu
 ```
 8. install menus/toolbars/utils etc for sway
  - install last app if you have networkmanager installed
 ```
-aur sync wob-git && \
-sudo pacman -S wob-git && \
-aur sync nwg-launchers  && \
-sudo pacman -S nwg-launchers && \
-aur sync networkmanager-dmenu-git && \
+aur sync wob-git
+sudo pacman -S wob-git
+aur sync nwg-launchers
+sudo pacman -S nwg-launchers
+aur sync wlsunset
+sudo pacman -S wlsunset
+aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```
 9. run sway (from terminal) to ensure if everything is ok and reboot system
 ```
-sway && \
+sway
 reboot
 ```
 - see .config/sway/keyboard.conf to change keyboard layout and other kb settings
