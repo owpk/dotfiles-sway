@@ -70,7 +70,7 @@ aur sync wob-git && \
 sudo pacman -S wob-git && \
 aur sync nwg-launchers  && \
 sudo pacman -S nwg-launchers && \
-aur sycnc networkmanager-dmenu-git && \
+aur sync networkmanager-dmenu-git && \
 sudo pacman -S networkmanager-dmenu-git
 ```
 9. run sway (from terminal) to ensure if everything is ok and reboot system
