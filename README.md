@@ -6,9 +6,9 @@
 
 1. install all needed apps
 ```
-sudo pacman -S --needed networkmanager network-manager-applet \
-reflector mtools vim neovim zsh vifm papirus-icon-theme noto-fonts-emoji \
-ttf-hack wl-clipboard translate-shell slurp grim light pamixer wmname
+sudo pacman -S --needed sway reflector mtools vim neovim zsh vifm \
+papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
+translate-shell slurp grim light pamixer wmname
 sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
@@ -42,6 +42,7 @@ ln -s ./.vim ~/.vim
 git clone https://aur.archlinux.org/aurutils.git
 cd aurutils
 makepkg -si
+su root
 CUSTOM=/etc/pacman.d/custom
 touch $CUSTOM
 echo '[options]' >> $CUSTOM
@@ -52,9 +53,10 @@ echo '[custom]' >> $CUSTOM
 echo 'SigLevel = Optional TrustAll' >> $CUSTOM
 echo 'Server = file:///var/cache/pacman/custom' >> $CUSTOM
 echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
-install -d /var/cache/pacman/custom -o owpk
+install -d /var/cache/pacman/custom -o $USER
 repo-add /var/cache/pacman/custom/custom.db.tar
 pacman -Syu
+su $USER
 ```
 7. install menus/toolbars/utils etc for sway
 ```
