@@ -12,7 +12,7 @@ __git_files () {
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export ZSH="/home/owpk/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_DISABLE_COMPFIX=true
 
 # THEME

@@ -8,7 +8,7 @@
 ```
 sudo pacman -S --needed sway reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
-translate-shell slurp grim light pamixer wmname
+translate-shell slurp grim light pamixer wmname dmenu
 sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
@@ -65,6 +65,7 @@ repo-add /var/cache/pacman/custom/custom.db.tar && \
 sudo pacman -Syu
 ```
 8. install menus/toolbars/utils etc for sway
+ - install last app if you have networkmanager installed
 ```
 aur sync wob-git && \
 sudo pacman -S wob-git && \
