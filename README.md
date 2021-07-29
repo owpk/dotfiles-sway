@@ -26,16 +26,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && \
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions  & \
 mv ~/.zshrc ~/.zshrc.bak 2> /dev/null
-ln -s ./.zshrc ~/.zshrc
+ln -s `pwd`/.zshrc ~/.zshrc
 mv ~/.p10k.zsh ~/.p10k.zsh.bak 2> /dev/null
-ln -s ./.p10k.zsh ~/.p10k.zsh
+ln -s `pwd`/.p10k.zsh ~/.p10k.zsh
 ```
 5. create all needed links
 ```
 mv ~/.config ~/.config.bak 2> /dev/null
-ln -s ./config ~/.config
+ln -s `pwd`/config ~/.config
 mv ~/.vim ~/.vim.bak 2> /dev/null
-ln -s ./.vim ~/.vim
+ln -s `pwd`/.vim ~/.vim
 ```
 6. insatll aurutils
 ```
