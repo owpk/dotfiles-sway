@@ -26,8 +26,11 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-5. create all needed links
+5. create all needed links and copy fonts
 ```
+sudo mkdir /usr/share/fonts/TTF
+sudo cp ./fonts/* /usr/share/fonts/TTF/
+fc-cache
 mv ~/.zshrc ~/.zshrc.bak 2> /dev/null
 ln -s `pwd`/.zshrc ~/.zshrc
 mv ~/.p10k.zsh ~/.p10k.zsh.bak 2> /dev/null
