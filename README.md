@@ -65,6 +65,10 @@ sudo pacman -S nwg-launchers
 aur sycnc networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```
-
+8. run sway (from terminal) to ensure if everything is ok and reboot system
+```
+sway
+reboot
+```
 - see .config/sway/keyboard.conf to change keyboard layout and other kb settings
 - see .config/sway/config.d/default to change hotkeys config
