@@ -6,10 +6,9 @@
 
 1. install all needed apps
 ```
-sudo pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
-wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh \
-vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp grim \
-light pamixer wmname
+sudo pacman -S --needed networkmanager network-manager-applet \
+reflector mtools vim neovim zsh vifm papirus-icon-theme noto-fonts-emoji \
+ttf-hack wl-clipboard translate-shell slurp grim light pamixer wmname
 sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
@@ -66,3 +65,6 @@ sudo pacman -S nwg-launchers
 aur sycnc networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```
+
+- see .config/sway/keyboard.conf to change keyboard layout and other kb settings
+- see .config/sway/config.d/default to change hotkeys config
