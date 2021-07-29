@@ -21,6 +21,7 @@ cd dotfiles-sway
 chsh -s /bin/zsh $USER
 ```
 4. install zsh utils
+- type exit when ohmyzsh wil be installed (first plugin)
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && \
@@ -28,7 +29,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ```
 5. create all needed links and copy fonts
 ```
-sudo mkdir /usr/share/fonts/TTF
+sudo mkdir /usr/share/fonts/TTF 2> /dev/null
 sudo cp ./fonts/* /usr/share/fonts/TTF/
 fc-cache
 mv ~/.zshrc ~/.zshrc.bak 2> /dev/null
@@ -44,8 +45,12 @@ ln -s `pwd`/.vim ~/.vim
 ```
 git clone https://aur.archlinux.org/aurutils.git && \
 cd aurutils
+makepkg -si
+```
+
+7. configure custom pacman repository
+```
 CUSTOM=/etc/pacman.d/custom
-makepkg -si && \
 sudo touch $CUSTOM && \
 sudo echo '[options]' >> $CUSTOM  && \
 sudo echo 'CacheDir = /var/cache/pacman/pkg' >> $CUSTOM  && \
@@ -59,7 +64,7 @@ sudo install -d /var/cache/pacman/custom -o $USER  && \
 sudo repo-add /var/cache/pacman/custom/custom.db.tar && \
 sudo pacman -Syu
 ```
-7. install menus/toolbars/utils etc for sway
+8. install menus/toolbars/utils etc for sway
 ```
 aur sync wob-git && \
 sudo pacman -S wob-git && \
@@ -68,9 +73,9 @@ sudo pacman -S nwg-launchers && \
 aur sycnc networkmanager-dmenu-git && \
 sudo pacman -S networkmanager-dmenu-git && \
 ```
-8. run sway (from terminal) to ensure if everything is ok and reboot system
+9. run sway (from terminal) to ensure if everything is ok and reboot system
 ```
-sway
+sway && \
 reboot
 ```
 - see .config/sway/keyboard.conf to change keyboard layout and other kb settings
