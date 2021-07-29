@@ -72,3 +72,17 @@ reboot
 ```
 - see .config/sway/keyboard.conf to change keyboard layout and other kb settings
 - see .config/sway/config.d/default to change hotkeys config
+
+# useful links
+- sway wm
+https://github.com/swaywm/sway
+- waybar (status bar)
+https://github.com/Alexays/Waybar
+- wofi (menus/launchers)
+https://hg.sr.ht/~scoopta/wofi
+- mako (wayland notification daemon)
+https://github.com/emersion/mako
+- nwg-launchers (menus/launchers)
+https://github.com/nwg-piotr/nwg-launchers
+- wob (wayland overlay bar)
+https://github.com/francma/wob
