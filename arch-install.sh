@@ -29,7 +29,6 @@ fc-cache
 chmod +w /etc/sudoers
 echo "owpk ALL=(ALL) ALL" >> /etc/sudoers
 
-
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service
 
