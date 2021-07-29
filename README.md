@@ -9,7 +9,8 @@
 sudo pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
 wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh \
 vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp grim \
-light pamixer
+light pamixer wmname
+sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
 ```
@@ -62,5 +63,6 @@ aur sync wob-git
 sudo pacman -S wob-git
 aur sync nwg-launchers
 sudo pacman -S nwg-launchers
-sudo usermod -a -G video $USER
+aur sycnc networkmanager-dmenu-git
+sudo pacman -S networkmanager-dmenu-git
 ```
