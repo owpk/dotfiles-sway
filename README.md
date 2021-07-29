@@ -4,24 +4,24 @@
 
 # Install for arch linux (just copy and paste to terminal)
 
-- 1. install all needed apps
-```bash
+1. install all needed apps
+```
 sudo pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
 wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh \
 vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp grim \
 light pamixer
 ```
-- 2. clone dotfiles
-```bash
+2. clone dotfiles
+```
 git clone https://github.com/owpk/dotfiles-sway
 cd dotfiles-sway
 ```
-- 3. change shell to zsh
-```bash
+3. change shell to zsh
+```
 chsh -s /bin/zsh owpk
 ```
-- 4. install zsh utils
-```bash
+4. install zsh utils
+```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -30,15 +30,15 @@ ln -s ./.zshrc ~/.zshrc
 mv ~/.p10k.zsh ~/.p10k.zsh.bak 2> /dev/null
 ln -s ./.p10k.zsh ~/.p10k.zsh
 ```
-- 5. create all needed links
-```bash
+5. create all needed links
+```
 mv ~/.config ~/.config.bak 2> /dev/null
 ln -s ./config ~/.config
 mv ~/.vim ~/.vim.bak 2> /dev/null
 ln -s ./.vim ~/.vim
 ```
-- 6. insatll aurutils
-```bash
+6. insatll aurutils
+```
 git clone https://aur.archlinux.org/aurutils.git
 cd aurutils
 makepkg -si
@@ -56,8 +56,8 @@ install -d /var/cache/pacman/custom -o owpk
 repo-add /var/cache/pacman/custom/custom.db.tar
 pacman -Syu
 ```
-- 7. install menus/toolbars/utils etc for sway
-```bash
+7. install menus/toolbars/utils etc for sway
+```
 aur sync wob-git
 sudo pacman -S wob-git
 aur sync nwg-launchers

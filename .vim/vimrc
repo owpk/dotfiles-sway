@@ -1,9 +1,9 @@
    set incsearch
-   set nocompatible     
+   set nocompatible
    set encoding=UTF-8
    set guifont=DroidSansMono\ Nerd\ Font\ Complete\ Mono\ 11
    let NERDTreeShowLineNumbers=1
-   filetype off                
+   filetype off
    let NERDTreeShowHidden=1
    set rtp+=~/.vim/bundle/Vundle.vim
    " autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -17,9 +17,9 @@
 " map {
    map , GA<enter>
    nnoremap <silent> <expr> <C-n> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
-   nnoremap <c-s> :w<CR> 
-   inoremap <c-s> <Esc>:w<CR>l 
-   vnoremap <c-s> <Esc>:w<CR> 
+   nnoremap <c-s> :w<CR>
+   inoremap <c-s> <Esc>:w<CR>l
+   vnoremap <c-s> <Esc>:w<CR>
    vnoremap <c-c> :w !xclip -selection clipboard<CR>
    nnoremap <leader>d "_d
    xnoremap <leader>d "_d
@@ -33,11 +33,11 @@
 
 " UI {
    set background=dark
-     
+
 	" packadd! dracula
 	syntax enable
   	" Statusline
-   colorscheme hybrid 
+   colorscheme hybrid
    set laststatus=2
   	set statusline=%F%m%r%h%w
 
@@ -58,7 +58,7 @@
    set expandtab
    set tabstop=3
    set shiftwidth=3
-   
+
    " Automatic Indentation
    set autoindent
    let g:autoformat_autoindent = 0
@@ -73,11 +73,12 @@
       Plug 'BrandonRoehl/auto-omni'
       " Plug 'artur-shaik/vim-javacomplete2'
    call plug#end()
-  
+
   " vundle
    call vundle#begin()
   "   Plugin 'ycm-core/YouCompleteMe'
       Plugin 'preservim/nerdtree'
+      Plugin 'iamcco/markdown-preview.nvim'
       Plugin 'chrisbra/Colorizer'
       Plugin 'jiangmiao/auto-pairs'
       Plugin 'ryanoasis/vim-devicons'

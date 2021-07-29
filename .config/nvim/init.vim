@@ -262,6 +262,7 @@ nmap <leader>t :TagbarToggle<CR>
    call vundle#begin()
   "   Plugin 'ycm-core/YouCompleteMe'
       Plugin 'preservim/nerdtree'
+      Plugin 'iamcco/markdown-preview.nvim'
       Plugin 'chrisbra/Colorizer'
       Plugin 'jiangmiao/auto-pairs'
       Plugin 'ryanoasis/vim-devicons'
