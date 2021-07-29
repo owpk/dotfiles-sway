@@ -204,14 +204,14 @@ bindsym --to-code  --whole-window --border $mod+shift+button5 resize grow width 
    # bindsym --to-code  XF86AudioMute         exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
    #wob
-   bindsym --to-code  XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
-   bindsym --to-code  XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
+   bindsym --to-code  XF86AudioRaiseVolume exec pamixer -ui 10 && pamixer --get-volume > $SWAYSOCK.wob
+   bindsym --to-code  XF86AudioLowerVolume exec pamixer -ud 10  && pamixer --get-volume > $SWAYSOCK.wob
    bindsym --to-code  XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
 
 # Backlight
    #wob
-   bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
-   bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+   bindsym XF86MonBrightnessUp exec light -A 10 && light -G | cut -d'.' -f1 > $WOBSOCK
+   bindsym XF86MonBrightnessDown exec light -U 10 && light -G | cut -d'.' -f1 > $WOBSOCK
 
    # bindsym --to-code  XF86MonBrightnessUp   exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -r
    # bindsym --to-code  XF86MonBrightnessDown exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -d

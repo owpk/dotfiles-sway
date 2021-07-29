@@ -10,10 +10,15 @@ echo "127.0.0.1	localhost" >> /etc/hosts
 echo "::1	      localhost" >> /etc/hosts
 echo "127.0.1.1   owpk.localdomain  owpk" >> /etc/hosts
 
+pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
+wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh \
+vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp grim \
+light pamixer
+
 echo "enter root password:"
 passwd
 echo "Creating user 'owpk'..."
-useradd -g users -G wheel,storage,power -m owpk
+useradd -g users -G wheel,storage,power,video -m owpk
 echo "enter owpk password:"
 passwd owpk
 
@@ -24,9 +29,6 @@ fc-cache
 chmod +w /etc/sudoers
 echo "owpk ALL=(ALL) ALL" >> /etc/sudoers
 
-pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
-wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh \
-vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp grim
 
 systemctl enable NetworkManager.service
 systemctl enable bluetooth.service

@@ -127,7 +127,7 @@
          "format": "{}",
          "tooltip": true,
          "interval": 3600,
-         "exec": "/home/owpk/.config/waybar/scripts/waybar-wttr.py",
+         "exec": "$HOME/.config/waybar/scripts/waybar-wttr.py",
          "return-type": "json"
     },
 
