@@ -37,7 +37,7 @@ ln -s `pwd`/.zshrc ~/.zshrc
 mv ~/.p10k.zsh ~/.p10k.zsh.bak 2> /dev/null
 ln -s `pwd`/.p10k.zsh ~/.p10k.zsh
 mv ~/.config ~/.config.bak 2> /dev/null
-ln -s `pwd`/config ~/.config
+ln -s `pwd`/.config ~/.config
 mv ~/.vim ~/.vim.bak 2> /dev/null
 ln -s `pwd`/.vim ~/.vim
 ```
