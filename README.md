@@ -59,7 +59,7 @@ sudo echo 'CleanMethod = KeepCurrent' >> $CUSTOM  && \
 sudo echo '[custom]' >> $CUSTOM  && \
 sudo echo 'SigLevel = Optional TrustAll' >> $CUSTOM  && \
 sudo echo 'Server = file:///var/cache/pacman/custom' >> $CUSTOM  && \
-echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf  && \
+sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf  && \
 install -d /var/cache/pacman/custom -o $USER  && \
 repo-add /var/cache/pacman/custom/custom.db.tar && \
 sudo pacman -Syu
