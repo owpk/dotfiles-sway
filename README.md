@@ -2,13 +2,14 @@
    <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc.jpg"/>
 </p>
 
-# Install for arch linux (just copy and paste to terminal)
+# Install for arch linux (copy and paste to terminal)
 
 1. install all needed apps
 ```
 sudo pacman -S --needed sway reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
-translate-shell slurp grim light pamixer wmname dmenu
+translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
+kanshi gnome-keyring alacritty
 sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
@@ -25,7 +26,7 @@ chsh -s /bin/zsh $USER
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 5. create all needed links and copy fonts
 ```
@@ -73,6 +74,8 @@ aur sync nwg-launchers
 sudo pacman -S nwg-launchers
 aur sync wlsunset
 sudo pacman -S wlsunset
+aur sync autotiling-git
+sudo pacman -S autotiling-git
 aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```
