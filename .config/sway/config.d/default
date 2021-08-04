@@ -210,8 +210,8 @@ bindsym --to-code  --whole-window --border $mod+shift+button5 resize grow width 
 
 # Backlight
    #wob
-   bindsym XF86MonBrightnessUp exec light -A 10 && light -G | cut -d'.' -f1 > $WOBSOCK
-   bindsym XF86MonBrightnessDown exec light -U 10 && light -G | cut -d'.' -f1 > $WOBSOCK
+   bindsym XF86MonBrightnessUp exec light -A 10 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
+   bindsym XF86MonBrightnessDown exec light -U 10 && light -G | cut -d'.' -f1 > $SWAYSOCK.wob
 
    # bindsym --to-code  XF86MonBrightnessUp   exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -r
    # bindsym --to-code  XF86MonBrightnessDown exec --no-startup-id $HOME/.config/sway/scripts/bnotif.sh -d
