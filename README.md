@@ -53,14 +53,18 @@ makepkg -si
 ```
 CUSTOM=/etc/pacman.d/custom
 sudo touch $CUSTOM
-sudo echo '[options]' >> $CUSTOM
-sudo echo 'CacheDir = /var/cache/pacman/pkg' >> $CUSTOM
-sudo echo 'CacheDir = /var/cache/pacman/custom' >> $CUSTOM
-sudo echo 'CleanMethod = KeepCurrent' >> $CUSTOM
-sudo echo '[custom]' >> $CUSTOM
-sudo echo 'SigLevel = Optional TrustAll' >> $CUSTOM
-sudo echo 'Server = file:///var/cache/pacman/custom' >> $CUSTOM
-sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+
+sudo cat >> $CUSTOM << EOF
+'[options]'
+'CacheDir = /var/cache/pacman/pkg' >> $CUSTOM
+'CacheDir = /var/cache/pacman/custom' >> $CUSTOM
+'CleanMethod = KeepCurrent' >> $CUSTOM
+'[custom]' >> $CUSTOM
+'SigLevel = Optional TrustAll' >> $CUSTOM
+'Server = file:///var/cache/pacman/custom' >> $CUSTOM
+'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+EOF
+
 install -d /var/cache/pacman/custom -o $USER
 repo-add /var/cache/pacman/custom/custom.db.tar
 sudo pacman -Syu
