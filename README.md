@@ -9,7 +9,7 @@
 sudo pacman -S --needed sway reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
 translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
-kanshi gnome-keyring alacritty
+kanshi gnome-keyring alacritty pavucontrol
 sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
