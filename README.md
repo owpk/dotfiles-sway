@@ -56,15 +56,15 @@ sudo touch $CUSTOM
 
 sudo cat >> $CUSTOM << EOF
 '[options]'
-'CacheDir = /var/cache/pacman/pkg' >> $CUSTOM
-'CacheDir = /var/cache/pacman/custom' >> $CUSTOM
-'CleanMethod = KeepCurrent' >> $CUSTOM
+'CacheDir = /var/cache/pacman/pkg'
+'CacheDir = /var/cache/pacman/custom'
+'CleanMethod = KeepCurrent'
 '[custom]' >> $CUSTOM
-'SigLevel = Optional TrustAll' >> $CUSTOM
-'Server = file:///var/cache/pacman/custom' >> $CUSTOM
-'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+'SigLevel = Optional TrustAll'
+'Server = file:///var/cache/pacman/custom'
 EOF
 
+sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
 install -d /var/cache/pacman/custom -o $USER
 repo-add /var/cache/pacman/custom/custom.db.tar
 sudo pacman -Syu
@@ -88,7 +88,7 @@ sudo pacman -S networkmanager-dmenu-git
 sway
 reboot
 ```
-- see .config/sway/keyboard.conf to change keyboard layout and other kb settings
+- see .config/sway/scripts/startup_config.sh to change keyboard layout and other kb settings
 - see .config/sway/config.d/default to change hotkeys config
 
 # useful links
