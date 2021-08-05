@@ -1,6 +1,5 @@
 #!/bin/bash
-KEYBOARD=`swaymsg -t get_inputs | grep -i keyboard | grep -i identifier | sed 's/"identifier": //' | sed 's/ //g' | sed 's/,//' | tail -1`
-
+KEYBOARD=`swaymsg -t get_inputs | grep -i keyboard | grep -i identifier |  sed 's/"identifier": //; s/ //g; s/,//' | tail -1`
 if [[ $1 ]]
 then
    KEYBOARD=$1
