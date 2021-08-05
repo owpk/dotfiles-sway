@@ -2,12 +2,10 @@
 !/.config/alacritty
 !/.config/fish
 !/.config/gtk*
-!/.config/menus
 !/.config/mako
 !/.config/sway
 !/.config/swaylock
 !/.config/waybar
-!/.config/menus
 !/.config/nvim
 !/.config/wofi
 !/.config/pipewire
