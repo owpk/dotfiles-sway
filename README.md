@@ -59,7 +59,8 @@ sudo cat >> $CUSTOM << EOF
 'CacheDir = /var/cache/pacman/pkg'
 'CacheDir = /var/cache/pacman/custom'
 'CleanMethod = KeepCurrent'
-'[custom]' >> $CUSTOM
+
+'[custom]'
 'SigLevel = Optional TrustAll'
 'Server = file:///var/cache/pacman/custom'
 EOF
