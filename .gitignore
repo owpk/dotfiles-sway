@@ -2,6 +2,7 @@
 !/.config/alacritty
 !/.config/fish
 !/.config/gtk*
+!/.config/menus
 !/.config/mako
 !/.config/sway
 !/.config/swaylock
