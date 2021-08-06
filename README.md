@@ -1,3 +1,8 @@
+
+- SWITCH BETWEEN master AND waybar_gaps_css_theme GIT BRANCHES TO SWITCH WAYBAR THEME
+- SEE .config/sway/scripts/startup_config.sh TO CHANGE KEYBOARD LAYOUT AND OTHER KB SETTINGS
+- SEE .config/sway/config.d/default TO CHANGE HOTKEYS CONFIG
+
 <p align="center">
    <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc.jpg"/>
 </p>
@@ -95,9 +100,6 @@ sudo pacman -S networkmanager-dmenu-git
 sway
 reboot
 ```
-- see .config/sway/scripts/startup_config.sh to change keyboard layout and other kb settings
-- see .config/sway/config.d/default to change hotkeys config
-- switch between master and waybar_gaps_css_theme git branches to switch waybar theme
 
 # useful links
 - sway wm
