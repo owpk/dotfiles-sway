@@ -28,7 +28,7 @@
     },
 
     "sway/window": {
-        "format": "{}"
+        "format": ":: {}"
     },
 
     "idle_inhibitor": {
@@ -124,7 +124,7 @@
      },
 
     "custom/weather": {
-         "format": "{}",
+         "format": "| {} |",
          "tooltip": true,
          "interval": 3600,
          "exec": "$HOME/.config/waybar/scripts/waybar-wttr.py",
@@ -133,7 +133,7 @@
 
    "custom/spotify": {
          "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-         "format": " {}   ",
+         "format": " {}  ",
          "return-type": "json",
          "on-click": "playerctl play-pause",
          "on-scroll-up": "playerctl next",
