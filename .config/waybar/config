@@ -4,8 +4,8 @@
     "height": 10,
 
     "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
-    //"modules-center": ["custom/spotify", "custom/play", "custom/pause"],
-    "modules-right": ["custom/keyboard-layout", "custom/weather", "backlight", "memory", "battery", "network", "pulseaudio", "clock", "custom/power"],
+    "modules-center": ["custom/spotify", "custom/weather", "clock", "custom/pause"],
+    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -116,6 +116,15 @@
         "on-click": "pavucontrol"
     },
 
+    "custom/spotify": {
+         "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+         "format": " {}   ",
+         "return-type": "json",
+         "on-click": "playerctl play-pause",
+         "on-scroll-up": "playerctl next",
+         "on-scroll-down": "playerctl previous"
+     },
+
      "custom/launcher": {
     	   "format":"| {} ",
     	   "on-click": "exec nwggrid",
@@ -129,24 +138,6 @@
          "interval": 3600,
          "exec": "$HOME/.config/waybar/scripts/waybar-wttr.py",
          "return-type": "json"
-    },
-
-    "custom/spotify": {
-        "tooltip": false,
-        "exec": "$HOME/.config/waybar/scripts/spotify.sh",
-        "format": " {}"
-    },
-
-    "custom/play": {
-        "tooltip": false,
-        "on-click": "playerctl --player=spotify play",
-        "format": " pl"
-    },
-
-    "custom/pause": {
-        "tooltip": false,
-        "on-click": "playerctl --player=spotify pause",
-        "format": " ||"
     },
 
    "custom/pacman": {
