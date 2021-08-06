@@ -4,8 +4,8 @@
     "height": 10,
 
     "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
-    //"modules-center": ["custom/spotify", "custom/play", "custom/pause"],
-    "modules-right": ["custom/keyboard-layout", "custom/weather", "backlight", "memory", "battery", "network", "pulseaudio", "clock", "custom/power"],
+    "modules-center": ["custom/spotify", "custom/play", "custom/pause", "custom/weather", "clock"],
+    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,

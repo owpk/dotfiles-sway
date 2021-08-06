@@ -49,8 +49,23 @@ nord15 #b48ead
    }
 
 window#waybar {
-    background:#2e3440;
+    /* background:#2e3440; */
+    border-radius: 5;
+    background-color: rgba(100, 100, 100, 0);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    padding: 2 2;
     /* background: shade(alpha(@borders, 0.9), 2.25); */
+}
+
+.modules-left,.modules-right,.modules-center {
+    margin-top: 8;
+    margin-left: 10;
+    margin-right: 10;
+    border-radius: 6;
+    padding: 7;
+    background:#2e3440;
 }
 
 #workspaces {

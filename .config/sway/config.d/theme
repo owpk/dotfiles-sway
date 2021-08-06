@@ -4,18 +4,18 @@ exec_always ~/.config/sway/scripts/import-gsettings
 output "*" bg ~/dotfiles-sway/wallpapers/wp.png fill
 
 # Set inner/outer gaps
-gaps inner 5
+gaps inner 10
 gaps outer 5
 
 # Hide titlebar on windows:
 default_border pixel 3
 
 # Default Font
-font pango:Noto Sans Regular 10
+font pango:Hack 10
 
 # Thin borders:
 smart_borders on
-smart_gaps on
+smart_gaps off
 
 # Set wallpaper:
 exec ~/.azotebg
