@@ -4,6 +4,9 @@
 <p align="center">
    <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc_wbg.png"/>
 </p>
+<p align="center">
+   <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc.gif"/>
+</p>
 
 # Install for arch linux (copy and paste to terminal)
 

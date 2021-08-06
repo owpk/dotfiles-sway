@@ -4,8 +4,8 @@ exec_always ~/.config/sway/scripts/import-gsettings
 output "*" bg ~/dotfiles-sway/wallpapers/wp.png fill
 
 # Set inner/outer gaps
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 0
 
 # Hide titlebar on windows:
 default_border pixel 3
