@@ -163,7 +163,7 @@
      // to find keyboard identifier use "swaymsg -t get_inputs"
     "custom/keyboard-layout": {
       	"tooltip": false,
-         "on-click": "~/.config/waybar/scripts/keyhint.sh",
+         // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          "format": " {}",
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh"
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '1:1:AT_Translated_Set_2_keyboard'"
