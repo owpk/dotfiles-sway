@@ -1,7 +1,7 @@
 
 - SWITCH BETWEEN master AND waybar_gaps_css_theme GIT BRANCHES TO SWITCH WAYBAR THEME
 - SEE .config/sway/scripts/startup_config.sh TO CHANGE KEYBOARD LAYOUT AND OTHER KB SETTINGS
-- SEE .config/sway/config.d/default TO CHANGE HOTKEYS CONFIG
+- SEE .config/sway/config.d/default TO CHANGE KEY BINDINGS CONFIG
 
 <p align="center">
    <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc.jpg"/>
