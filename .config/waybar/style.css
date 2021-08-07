@@ -1,11 +1,3 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
@@ -100,9 +92,13 @@ window#waybar {
     color: #eceff4;
 }
 
-#clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #window, #custom-power, #custom-pacman {
+#clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #window, #custom-pacman {
     margin-right: 5px;
     margin-left: 5px;
+}
+
+#custom-power {
+
 }
 
 /* -----------------------------------------------------------------------------
@@ -128,6 +124,9 @@ window#waybar {
 #custom-launcher,#custom-power{
     font-size: 13px;
     border-style: hidden;
+    background-color: #8db0AE;
+    font-size: 13px;
+    color: #2e3440;
 }
 
 #tray {
@@ -136,13 +135,7 @@ window#waybar {
    padding: 0 5px;
 }
 
-#custom-launcher {
-   background-color: #8db0AE;
-   font-size: 13px;
-   color: #2e3440;
-}
-
-#custom-arrowL0 {
+#custom-arrowL0,#custom-arrowR0 {
    background-color: #2e3440;
    /* color: shade(alpha(@borders, 1.0), 2.25); */
    color: #8db0AE;

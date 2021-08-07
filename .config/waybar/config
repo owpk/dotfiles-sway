@@ -5,7 +5,7 @@
 
     "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["custom/spotify", "custom/weather", "clock"],
-    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/power"],
+    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/arrowR0", "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -150,7 +150,7 @@
     },
 
     "custom/power": {
-      	"format":"⏻",
+      	"format":" ⏻ ",
        	"on-click": "nwgbar",
       	"tooltip": false,
     },
@@ -166,7 +166,10 @@
      },
 
      "custom/arrowL0": {
-         // 
     	   "format":""
+      },
+
+     "custom/arrowR0": {
+    	   "format":""
       },
 }
