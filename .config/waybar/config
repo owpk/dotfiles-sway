@@ -4,8 +4,8 @@
     "height": 10,
 
     "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["custom/spotify", "custom/weather", "clock", "custom/pause"],
-    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/power"],
+    "modules-center": ["custom/stub", "custom/spotify", "custom/weather", "clock", "custom/pause", "custom/stub"],
+    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/arrowR0", "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -116,9 +116,14 @@
         "on-click": "pavucontrol"
     },
 
+    "custom/stub" : {
+        "format": " {} ",
+        "exec": "echo  \":\""
+    },
+
     "custom/spotify": {
          "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-         "format": " {}   ",
+         "format": "{}   ",
          "return-type": "json",
          "on-click": "playerctl play-pause",
          "on-scroll-up": "playerctl next",
@@ -150,7 +155,7 @@
     },
 
     "custom/power": {
-      	"format":"⏻",
+      	"format":" ⏻ ",
        	"on-click": "nwgbar",
       	"tooltip": false,
     },
@@ -166,7 +171,10 @@
      },
 
      "custom/arrowL0": {
-         // 
     	   "format":""
+      },
+
+     "custom/arrowR0": {
+    	   "format":""
       },
 }
