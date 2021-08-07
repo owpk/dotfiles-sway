@@ -11,10 +11,9 @@ notif() {
 if [[ $1 == '-g' ]]
 then
    grim -g "$(slurp -d)" $TARGET
-   notif $TARGET
 else
    grim $TARGET
-   notif $TARGET
 fi
 
+notif $TARGET
 cat $TARGET | wl-copy
