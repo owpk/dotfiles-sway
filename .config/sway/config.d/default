@@ -35,13 +35,13 @@ exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 ## reload
 bindsym --to-code  $mod+f1            reload
 
-bindsym --to-code  $mod+slash         split vertical; exec $term-working-dir
+bindsym --to-code  $mod+slash         split vertical; exec $term
 bindsym --to-code  $mod+Shift+slash   split vertical; exec $term-working-dir
 bindsym --to-code  $mod+apostrophe	  split horizontal; exec $term
 
 bindsym --to-code  $mod+Shift+Tab     workspace next
 bindsym --to-code  $mod+backslash     workspace back_and_forth
-bindsym --to-code  $mod+Tab           exec ~/.config/sway/scripts/wswitch.sh
+bindsym --to-code  $mod+Tab           exec /bin/python3 ~/.config/wofi/windows.py
 
 # Start a floating terminal
 bindsym --to-code  $mod+Return        exec $term
