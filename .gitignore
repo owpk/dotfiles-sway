@@ -1,6 +1,6 @@
 /.config/*
 !/.config/alacritty
-!/.config/sway/config.d/input
+/.config/sway/config.d/input
 !/.config/fish
 !/.config/gtk*
 !/.config/mako
