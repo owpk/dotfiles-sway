@@ -1,37 +1,8 @@
-/* =============================================================================
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-/*
-Polar Night
-nord0  #2e3440
-nord1  #3b4252
-nord2  #434c5e
-nord3  #4c566a
-Snow Storm
-nord4  #d8dee9
-nord5  #e5e9f0
-nord6  #eceff4
-Frost
-nord7  #8fbcbb
-nord8  #88c0d0
-nord9  #81a1c1
-nord10 #5e81ac
-Aurora
-nord11 #bf616a
-nord12 #d08770
-nord13 #ebcb8b
-nord14 #a3be8c
-nord15 #b48ead
-*/
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
+@import '../colors.css';
 
 /* Reset all styles */
 * {
-    color: #eceff4;
+    color: @font;
     border: none;
     border-radius: 0;
     padding: 0 0;
@@ -40,12 +11,12 @@ nord15 #b48ead
 }
 
 .modules-center {
-    background: #404859;
+    background: @bg-light;
     border-radius: 4;
 }
 
 window#waybar {
-    background:#2e3440;
+    background: @bg;
     /* background: shade(alpha(@borders, 0.9), 2.25); */
 }
 
@@ -55,7 +26,7 @@ window#waybar {
 }
 
 #workspaces button {
-    color: #eceff4;
+    color: @font;
     min-height: 0;
     border-color: shade(alpha(@borders, 0.9), 2.25);
     padding: 0 7px;
@@ -64,12 +35,12 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-color: #8db0AE;
+    border-color: @accent;
 }
 
 #workspaces button.urgent {
-    background: #bf616A;
-    color: #eceff4;
+    background: @aur1;
+    color: @font;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -78,7 +49,7 @@ window#waybar {
 }
 
 #mode {
-    color: #eceff4;
+    color: @font;
 }
 
 #clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #window, #custom-pacman {
@@ -86,21 +57,20 @@ window#waybar {
     margin-left: 5px;
 }
 
-/* -----------------------------------------------------------------------------
+/* --------------
  * Module styles
- * -------------------------------------------------------------------------- */
-
+ * -------------- */
 
 @keyframes blink {
     to {
-        color: #404859;
-        background-color: #404859;
+        color: @aur1;
+        background-color: @aur1;
     }
 }
 
 #battery.critical:not(.charging) {
-    background: #bf616a;
-    color: #eceff4;
+    background: @aur1;
+    color: @font;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -109,23 +79,23 @@ window#waybar {
 }
 
 #custom-launcher,#custom-power{
-    background-color: #8db0AE;
+    background-color: @accent;
     font-size: 13px;
     border-style: hidden;
-    color: #2e3440;
+    color: @bg;
     font-size: 13px;
 }
 
 #tray {
-   background-color: #8db0AE;
-   color: #2e3440;
+   background-color: @accent;
+   color: @bg;
    padding: 0 5px;
 }
 
 #custom-arrowL0,#custom-arrowR0 {
-   background-color: #2e3440;
+   background-color: @bg;
    /* color: shade(alpha(@borders, 1.0), 2.25); */
-   color: #8db0AE;
+   color: @accent;
 }
 
 #window{
@@ -138,14 +108,14 @@ window#waybar {
 }
 
 #pulseaudio.muted {
-    color: #3b4252;
+    color: @aur1;
 }
 
 #temperature.critical {
-    color: #bf616a;
+    color: @aur1;
 }
 
 #network.disabled {
-    color:#bf616a;
+    color: @aur1;
 }
 
