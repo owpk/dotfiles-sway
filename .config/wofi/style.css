@@ -2,6 +2,7 @@
 scheme: "Nord"
 author: "arcticicestudio"
 */
+
 @define-color base10 #2E3440;
 @define-color base00 #3B4252;
 @define-color base02 #434C5E;
@@ -32,7 +33,7 @@ author: "arcticicestudio"
 
 #entry:selected {
    color: @base0D;
-   background-color: @bg-light;
+   background-color: @base02;
    padding: 7px;
 }
 
@@ -45,7 +46,7 @@ author: "arcticicestudio"
    animation-duration: 0.4s;
    background-color: transparent;
    font-family: Hack;
-   /* font-size:14; */
+/* font-size:14; */
 }
 
 #input {
