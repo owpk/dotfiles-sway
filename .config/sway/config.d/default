@@ -33,11 +33,12 @@ exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 ### Key bindings
 
 ## reload
-bindsym --to-code  $mod+f1            reload
+bindsym --to-code  $mod+f1                   reload
 
-bindsym --to-code  $mod+slash         split vertical; exec $term-working-dir
-bindsym --to-code  $mod+Shift+slash   split vertical; exec $term-working-dir
-bindsym --to-code  $mod+apostrophe	  split horizontal; exec $term
+bindsym --to-code  $mod+slash                split vertical; exec $term
+bindsym --to-code  $mod+Shift+slash          split vertical; exec $term-working-dir
+bindsym --to-code  $mod+apostrophe	         split horizontal; exec $term
+bindsym --to-code  $mod+Shift+apostrophe	   split horizontal; exec $term-working-dir
 
 bindsym --to-code  $mod+Shift+Tab     workspace next
 bindsym --to-code  $mod+backslash     workspace back_and_forth
@@ -46,6 +47,7 @@ bindsym --to-code  $mod+Tab           exec /bin/python3 ~/.config/wofi/windows.p
 # Start a floating terminal
 bindsym --to-code  $mod+Return        exec $term
 bindsym --to-code  $mod+Shift+Return  exec $term-working-dir
+
 # space
 bindsym --to-code  $mod+space         exec --no-startup-id makoctl restore
 bindsym --to-code  $mod+Shift+space   exec --no-startup-id makoctl dismiss -a

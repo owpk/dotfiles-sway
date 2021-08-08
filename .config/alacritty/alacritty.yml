@@ -3,6 +3,7 @@ colors:
   # Default colors
   primary:
 
+    #Nord
     background:   "#2E3440"
 
     # background:   "#102020"
