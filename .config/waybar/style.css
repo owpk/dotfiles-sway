@@ -64,7 +64,7 @@ window#waybar {
 @keyframes blink {
     to {
         color: @aur1;
-        background-color: @aur1;
+        background-color: @font;
     }
 }
 
