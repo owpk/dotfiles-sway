@@ -1,6 +1,6 @@
 #!/bin/bash
 # you need to reboot system if you start sway with this dotfiles for the first time, because input config will be loaded before this script is executed"
-KEYBOARD=`swaymsg -t get_inputs | grep -i keyboard | grep -i identifier | sed 's/"identifier": //; s/ //g; s/,//' | tail -1`
+KEYBOARD=`swaymsg -t get_inputs | grep -i identifier | grep -i keyboard | tail -1 | sed 's/"identifier": //; s/ //g; s/,//'`
 TARGET="$HOME/.config/sway/config.d/input"
 
 cat > $TARGET << EOF
