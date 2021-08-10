@@ -36,17 +36,17 @@ color: @base0D;
 background-color: @base02;
 padding: 7px;
 }
- 
+
 #text:selected {
 color: @base04;
 }
- 
+
 #window {
 animation-name: fadeIn;
 animation-duration: 0.4s;
 background-color: transparent;
-font-family: Ubuntu Mono;
-/* font-size:14; */
+font-family: Hack;
+font-size:12;
 }
 
 #input {
@@ -78,7 +78,7 @@ margin: 25px;
 #text {
 color: @base04;
 background-color: transparent;
-} 
+}
 
 #img {
   background-color: transparent;
