@@ -1,4 +1,4 @@
-exec $HOME/.config/sway/scripts/startup_config.sh
+# exec $HOME/.config/sway/scripts/startup_config.sh
 exec wmname LG3D
 
 # Auth with polkit-gnome:

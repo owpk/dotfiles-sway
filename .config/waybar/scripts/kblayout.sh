@@ -1,9 +1,9 @@
 #!/bin/bash
-KEYBOARD=`swaymsg -r -t get_inputs | grep -i identifier | grep -i "keyboard"| tail -1 |  sed 's/"identifier": //; s/ //g; s/,//'`
+KEYBOARD=`swaymsg -r -t get_inputs | grep -i identifier | grep -i keyboard | tail -1 |  sed 's/"identifier": //; s/ //g; s/,//'`
 
 if [[ $1 ]]
 then
-   KEYBOARD=$1
+   KEYBOARD="\"$1\""
 fi
 
 swaymsg -r -t get_inputs | jq -r \
