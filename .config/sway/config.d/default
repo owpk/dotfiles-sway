@@ -8,13 +8,13 @@ set $up k
 set $right l
 
 set $term alacritty
-set $term-float alacritty
+set $term-float $term
+set $term-working-dir $term --working-directory=$( swaymsg -r -t get_tree | jq '.. | (.nodes? // empty)[] | select(.focused == true).pid? // empty' | xargs pstree -p | grep "\<tmux\>\|\<fish\>\|\<bash\>\|\<zsh\>\|\<sh\>" | grep -o '[1-9]*' | xargs pwdx 2> /dev/null | cut -f2- -d' ' | sort | tail -n 1 | tr -d '\n')
 set $menu wofi -c ~/.config/wofi/config -I
 set $launcher nwggrid
 set $powermenu nwgbar
 set $cheat gedit ~/.config/sway/cheatsheet
 set $filemanager nautilus
-set $term-working-dir alacritty --working-directory=$( swaymsg -t get_tree | jq '.. | (.nodes? // empty)[] | select(.focused == true).pid? // empty' | xargs pstree -p | grep "\<tmux\>\|\<fish\>\|\<bash\>\|\<zsh\>\|\<sh\>" | grep -o '[0-9]*' | xargs pwdx 2> /dev/null | cut -f2- -d' ' | sort | tail -n 1 | tr -d '\n')
 
 # wob
 set $WOBSOCKET $XDG_RUNTIME_DIR/wob.sock
@@ -85,7 +85,7 @@ bindsym --to-code  $mod+q             kill
 # s
 # bindsym --to-code  $mod+s layout stacking
 bindsym --to-code  $mod+s             sticky toggle;
-bindsym --to-code  $mod+Shift+s		   split toggle
+bindsym --to-code  $mod+Shift+s		  split toggle
 
 # v
 # bindsym --to-code  $mod+v splitv

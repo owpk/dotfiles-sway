@@ -18,7 +18,10 @@ def write_output(text, player):
               'class': 'custom-' + player.props.player_name,
               'alt': player.props.player_name}
 
-    sys.stdout.write(json.dumps(output) + '\n')
+    dump = json.dumps(output) + '\n'
+    logger.info(':: Dumped info: ' + dump)
+
+    sys.stdout.write(dump)
     sys.stdout.flush()
 
 
@@ -36,8 +39,9 @@ def on_metadata(player, metadata, manager):
             ':ad:' in player.props.metadata['mpris:trackid']:
         track_info = 'AD PLAYING'
     elif player.get_artist() != '' and player.get_title() != '':
-        track_info = '{artist} - {title}'.format(artist=player.get_artist(),
-                                                 title=player.get_title())
+        track_info = '{artist} - {title}' \
+        .format(artist=player.get_artist().replace("&", "&amp;"),
+                title=player.get_title().replace("&", "&amp;"))
     else:
         track_info = player.get_title()
 
