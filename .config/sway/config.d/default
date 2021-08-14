@@ -14,7 +14,7 @@ set $menu wofi -c ~/.config/wofi/config -I
 set $launcher nwggrid
 set $powermenu nwgbar
 set $cheat gedit ~/.config/sway/cheatsheet
-set $filemanager nautilus
+set $filemanager alacritty -e ranger
 
 # wob
 set $WOBSOCKET $XDG_RUNTIME_DIR/wob.sock
