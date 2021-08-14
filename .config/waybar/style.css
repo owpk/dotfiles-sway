@@ -46,15 +46,33 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+   background: rgba(255, 255, 255, 0.3);
+   border-radius: 4px;
 }
 
 #mode {
-    color: @font;
+   color: @font;
 }
 
-#clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #window, #custom-pacman {
+#clock, #custom-power, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #custom-pacman {
     margin-right: 5px;
     margin-left: 5px;
+
+    background-color: @bg-light;
+    border-radius: 4px;
+
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#window {
+   margin-left: 10px;
+   margin-right: 20px;
+   border-style: hidden;
 }
 
 /* --------------
@@ -78,12 +96,29 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#custom-launcher,#custom-power{
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-launcher{
     background-color: @accent;
     font-size: 13px;
     border-style: hidden;
     color: @bg;
     font-size: 13px;
+    /* border-radius:  0 4 4 0; */
+}
+
+#custom-power {
+   border-radius: 4 0 0 4;
+   margin-left: 4px;
+   margin-right: 0px;
 }
 
 #tray {
@@ -96,11 +131,6 @@ window#waybar {
    background-color: @bg;
    /* color: shade(alpha(@borders, 1.0), 2.25); */
    color: @accent;
-}
-
-#window{
-    border-style: hidden;
-    /* margin-top:1px; */
 }
 
 #mode{

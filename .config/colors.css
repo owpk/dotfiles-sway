@@ -10,10 +10,11 @@
 @define-color snow2  #eceff4;
 
 /* Frost */
-@define-color frost0  #8fbcbb;
-@define-color frost1  #88c0d0;
-@define-color frost2  #8db0AE;
-@define-color frost3  #5e81ac;
+@define-color frost0  #8db0AE;
+@define-color frost1  #8fbcbb;
+@define-color frost2  #5c8286;
+@define-color frost3  #88c0d0;
+@define-color frost4  #5e81ac;
 
 /* Aurora */
 @define-color aur1 #bf616a;
@@ -25,6 +26,6 @@
 /* main definition */
 @define-color bg       @polar0;
 @define-color bg-light @polar3;
-@define-color accent   @frost2;
+@define-color accent   @frost1;
 @define-color font     @snow2;
 
