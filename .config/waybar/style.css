@@ -11,12 +11,12 @@
 }
 
 .modules-center {
-    background: @bg-light;
+    background: @bg;
     border-radius: 4;
 }
 
 window#waybar {
-    background: @bg;
+    background: alpha(@bg, 0.8);
     /* background: shade(alpha(@borders, 0.9), 2.25); */
 }
 
@@ -59,25 +59,27 @@ window#waybar {
 }
 
 #clock, #custom-power, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #custom-pacman {
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 1px;
+    margin-left: 1px;
 
-    background-color: @bg-light;
+    background-color: @bg;
     border-radius: 4px;
 
-    padding-left:5px;
-    padding-right:5px;
+    padding-left:10px;
+    padding-right:10px;
 }
 
 #window {
    margin-left: 10px;
    margin-right: 20px;
    border-style: hidden;
+   color: @font;
 }
 
-/* --------------
- * Module styles
- * -------------- */
+#custom-power {
+   border-radius: 4 0 0 4;
+   margin-right: 0px;
+}
 
 @keyframes blink {
     to {
@@ -108,17 +110,10 @@ window#waybar {
 
 #custom-launcher{
     background-color: @accent;
-    font-size: 13px;
     border-style: hidden;
     color: @bg;
     font-size: 13px;
     /* border-radius:  0 4 4 0; */
-}
-
-#custom-power {
-   border-radius: 4 0 0 4;
-   margin-left: 4px;
-   margin-right: 0px;
 }
 
 #tray {
