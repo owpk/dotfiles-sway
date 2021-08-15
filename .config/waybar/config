@@ -168,11 +168,19 @@
          "format": " {}",
       	"tooltip": false,
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh"
-
          // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '1:1:AT_Translated_Set_2_keyboard'"
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '6700:3620:SEM_USB_Keyboard'"
      },
+
+     "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+      },
 
      "custom/arrowL0": {
     	   "format":""

@@ -23,7 +23,8 @@ public class KeyHints {
                 .map(x -> x.replaceAll("[ |\t]+", " ")
                         .replaceAll("\"", "").substring(x.indexOf("$"))).collect(Collectors.toList());
 
-        var splittedSource = splitToSublist(lines);
+        var splittedSource = splitToSublist(lines.stream()
+              .sorted(Comparator.comparing(x -> x.toLowerCase())).collect(Collectors.toList()));
 
         var splittedListOfMap = splittedSource.stream()
                 .map(x -> {
