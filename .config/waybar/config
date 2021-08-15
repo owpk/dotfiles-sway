@@ -165,10 +165,11 @@
 
      // to find keyboard identifier use "swaymsg -t get_inputs"
     "custom/keyboard-layout": {
-      	"tooltip": false,
-         // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          "format": " {}",
+      	"tooltip": false,
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh"
+
+         // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '1:1:AT_Translated_Set_2_keyboard'"
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '6700:3620:SEM_USB_Keyboard'"
      },

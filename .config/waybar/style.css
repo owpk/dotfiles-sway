@@ -16,8 +16,15 @@
 }
 
 window#waybar {
-    background: alpha(@bg, 0.8);
+    background: alpha(@bg, 0.9);
     /* background: shade(alpha(@borders, 0.9), 2.25); */
+}
+
+tooltip {
+     background: rgba(43, 48, 59, 0.95);
+     border: 1px solid rgba(100, 114, 125, 0.8);
+     border-radius: 7px;
+     border-color: shade(alpha(@borders, 0.9), 2.25);
 }
 
 #workspaces {

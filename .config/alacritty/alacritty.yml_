@@ -2,7 +2,23 @@
 colors:
   # Default colors
   primary:
+
+    #Nord
     background:   "#2E3440"
+
+    # background:   "#102020"
+
+    # DarkGreen
+    # background:   "#112121"
+
+    # DarkBlue
+    # background:   "#121d21"
+
+    # Gray
+    # background:   "#262626"
+
+     # background:   "#1e2127"
+
     foreground:   "#c5c8c6"
 
   # Normal colors
@@ -55,7 +71,7 @@ colors:
 #     cyan:    '#8abeb7'
 #     white:   '#ffffff'
 
-background_opacity: 0.97
+background_opacity: 0.98
 
 font:
   normal:

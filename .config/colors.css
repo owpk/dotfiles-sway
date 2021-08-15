@@ -23,16 +23,15 @@
 @define-color aur4 #a3be8c;
 @define-color aur5 #b48ead;
 
-/* DARK
+/* DARK */
 @define-color bg       @polar0;
 @define-color bg-light @polar3;
 @define-color accent   @frost1;
 @define-color font     @snow2;
-*/
 
-/* LIGHT */
+/* LIGHT
 @define-color bg       @snow0;
 @define-color bg-light @show1;
 @define-color accent   @frost2;
 @define-color font     @polar0;
-
+*/
