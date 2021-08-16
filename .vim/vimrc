@@ -29,6 +29,7 @@
    map <C-j> 5j
    map <C-k> 5k
    imap <F8> <Esc>g~iwea
+   nmap <C-X>g :InsertBothGetterSetter
 " }
 
 " UI {
@@ -77,6 +78,7 @@
   " vundle
    call vundle#begin()
   "   Plugin 'ycm-core/YouCompleteMe'
+      Plugin 'VundleVim/Vundle.vim'
       Plugin 'preservim/nerdtree'
       Plugin 'iamcco/markdown-preview.nvim'
       Plugin 'chrisbra/Colorizer'

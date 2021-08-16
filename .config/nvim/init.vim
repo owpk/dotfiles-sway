@@ -120,10 +120,14 @@ set cursorline                          " Enable highlighting of the current lin
 	nmap <leader>8 <Plug>BuffetSwitch(8)
 	nmap <leader>9 <Plug>BuffetSwitch(9)
 	nmap <leader>0 <Plug>BuffetSwitch(10)
+
+" Java auto setter/getter
+noremap <C-x> :InsertBothGetterSetter<CR>
+
 let g:buffet_powerline_separators = 0
 let g:buffet_use_devicons = 0
 
-noremap <Tab> :bn<CR>
+" noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
 noremap <Leader><Tab> :Bw<CR>
 noremap <Leader><S-Tab> :Bw!<CR>
@@ -201,7 +205,6 @@ nmap <leader>t :TagbarToggle<CR>
 " map {
    map , GA<enter>
    nnoremap <silent> <expr> <C-n> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
-   nnoremap <c-s> :w<CR>
    inoremap <c-s> <Esc>:w<CR>l
    vnoremap <c-s> <Esc>:w<CR>
    vnoremap <c-c> :w !xclip -selection clipboard<CR>
