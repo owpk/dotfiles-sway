@@ -11,13 +11,20 @@
 }
 
 .modules-center {
-    background: @bg-light;
+    background: @bg;
     border-radius: 4;
 }
 
 window#waybar {
-    background: @bg;
+    background: alpha(@bg, 0.9);
     /* background: shade(alpha(@borders, 0.9), 2.25); */
+}
+
+tooltip {
+     background: rgba(43, 48, 59, 0.95);
+     border: 1px solid rgba(100, 114, 125, 0.8);
+     border-radius: 7px;
+     border-color: shade(alpha(@borders, 0.9), 2.25);
 }
 
 #workspaces {
@@ -46,20 +53,40 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    border-radius: 4px;
+}
+
+#workspaces button:hover {
+   background: rgba(255, 255, 255, 0.3);
+   border-radius: 4px;
 }
 
 #mode {
-    color: @font;
+   color: @font;
 }
 
-#clock, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #window, #custom-pacman {
-    margin-right: 5px;
-    margin-left: 5px;
+#clock, #custom-power, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #custom-pacman {
+    margin-right: 1px;
+    margin-left: 1px;
+
+    background-color: @bg;
+    border-radius: 4px;
+
+    padding-left:10px;
+    padding-right:10px;
 }
 
-/* --------------
- * Module styles
- * -------------- */
+#window {
+   margin-left: 10px;
+   margin-right: 20px;
+   border-style: hidden;
+   color: @font;
+}
+
+#custom-power {
+   border-radius: 4 0 0 4;
+   margin-right: 0px;
+}
 
 @keyframes blink {
     to {
@@ -78,12 +105,22 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#custom-launcher,#custom-power{
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-launcher{
     background-color: @accent;
-    font-size: 13px;
     border-style: hidden;
     color: @bg;
     font-size: 13px;
+    /* border-radius:  0 4 4 0; */
 }
 
 #tray {
@@ -96,11 +133,6 @@ window#waybar {
    background-color: @bg;
    /* color: shade(alpha(@borders, 1.0), 2.25); */
    color: @accent;
-}
-
-#window{
-    border-style: hidden;
-    /* margin-top:1px; */
 }
 
 #mode{

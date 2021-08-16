@@ -15,3 +15,4 @@ swaymsg -mrt subscribe '["input"]' | jq -r --unbuffered \
     | .input
     | select(.identifier == $KEYBOARD and .type == \"keyboard\") \
     | .xkb_active_layout_name"
+

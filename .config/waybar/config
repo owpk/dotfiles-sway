@@ -3,9 +3,9 @@
     "position": "top",
     "height": 10,
 
-    "modules-left": ["tray", "custom/launcher", "custom/arrowL0", "sway/workspaces", "sway/mode", "sway/window"],
+    "modules-left": ["tray", "custom/launcher", "sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["custom/stub", "custom/spotify", "custom/weather", "clock", "custom/stub"],
-    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio", "custom/arrowR0", "custom/power"],
+    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio",  "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -93,10 +93,13 @@
      "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format": "⚠ Disabled",
-        "format-wifi": "|  {essid} |",
-        "format-ethernet": "|  {ifname} |",
-        "format-disconnected": "| ⚠ Disconnected |",
-        "on-click": "networkmanager_dmenu"
+        "format-wifi": " ",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "on-click": "networkmanager_dmenu",
+        "tooltip" : true,
+        "tooltip-format" : "{ifname}\n{ipaddr}",
+        "tooltip-format-wifi" : "{essid} {ifname}\n{ipaddr}\nstrength: {signalStrength}%"
     },
 
     "pulseaudio": {
@@ -131,7 +134,7 @@
      },
 
      "custom/launcher": {
-    	   "format":"| {} ",
+    	   "format":"| {}  ",
     	   "on-click": "exec nwggrid",
     	   "tooltip": false,
          "exec" : "echo $USER"
@@ -162,13 +165,22 @@
 
      // to find keyboard identifier use "swaymsg -t get_inputs"
     "custom/keyboard-layout": {
-      	"tooltip": false,
-         // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          "format": " {}",
+      	"tooltip": false,
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh"
+         // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '1:1:AT_Translated_Set_2_keyboard'"
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '6700:3620:SEM_USB_Keyboard'"
      },
+
+     "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+      },
 
      "custom/arrowL0": {
     	   "format":""
