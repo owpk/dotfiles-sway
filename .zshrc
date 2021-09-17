@@ -49,6 +49,7 @@ alias dckd="sudo systemctl start docker"
 alias trns="wl-paste | trans -b -t $1"
 alias hs="history | grep $1"
 alias supd="sudo pacman -Syyu"
+alias idea="~/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/211.7628.21/bin/idea.sh"
 #alias aur="curl https://aur.archlinux.org/packages.gz | gzip -cd"
 #alias idea-ce="DRI_PRIME=1 idea"
 
