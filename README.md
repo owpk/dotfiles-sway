@@ -92,6 +92,8 @@ aur sync wlsunset
 sudo pacman -S wlsunset
 aur sync autotiling-git
 sudo pacman -S autotiling-git
+aur sync azote
+sudo pacman -S azote
 aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```

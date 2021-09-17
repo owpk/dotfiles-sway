@@ -1,14 +1,14 @@
 # Apply gtk theming
 exec_always ~/.config/sway/scripts/import-gsettings
 
-output "*" bg ~/dotfiles-sway/wallpapers/wp.png fill
+# output "*" bg ~/dotfiles-sway/wallpapers/wp.png fill
 
 # Set inner/outer gaps
 gaps inner 10
 gaps outer 0
 
 # Hide titlebar on windows:
-default_border pixel 3
+default_border pixel 5
 
 # Default Font
 font pango:Noto Sans Regular 10
@@ -17,7 +17,7 @@ font pango:Noto Sans Regular 10
 smart_borders on
 smart_gaps on
 
-# Set wallpaper:
+# Set wallpaper w azote:
 exec ~/.azotebg
 
 # Title format for windows
@@ -32,7 +32,7 @@ for_window [shell="x_wayland"] title_format "%class - %title"
 #client.urgent           #ebcb8b #ebcb8b #2e3440 #8fbcbb   #ebcb8b
 
 # Window borders
-client.focused          #5C8286 #5C8286 #ffffff #2e9ef4   #d81b60
+client.focused          #5C8286 #5C8286 #ffffff #2e9ef4   #8fbcbb
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #333845   #333845
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
