@@ -11,7 +11,7 @@ echo "::1	      localhost" >> /etc/hosts
 echo "127.0.1.1   owpk.localdomain  owpk" >> /etc/hosts
 
 pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
-wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh alacritty\
+wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh alacritty \
 vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell  pamixer
 
 echo "enter root password:"
