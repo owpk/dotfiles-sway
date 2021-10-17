@@ -37,7 +37,6 @@ plugins=(
 )
 
 # ALIASES
-alias spring="cd ~/PAPKA/GUIDES/Spring/SpringGB"
 alias cfg="cd ~/.config"
 # alias aur="cd ~/hm/AUR"
 alias psqld="sudo systemctl start postgresql"
