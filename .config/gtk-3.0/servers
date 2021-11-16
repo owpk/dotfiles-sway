@@ -23,4 +23,24 @@
       </metadata>
     </info>
   </bookmark>
+  <bookmark href="ftp://192.168.0.1/" added="2021-11-11T15:26:20.144622Z" modified="2021-11-11T15:26:20.144627Z" visited="2021-11-11T15:26:20.144623Z">
+    <title>/ on 192.168.0.1</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2021-11-11T15:26:20.144625Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="ftp://home-owpk/" added="2021-11-11T15:33:00.883401Z" modified="2021-11-11T15:33:00.883406Z" visited="2021-11-11T15:33:00.883403Z">
+    <title>/ on home-owpk</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2021-11-11T15:33:00.883404Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
 </xbel>
