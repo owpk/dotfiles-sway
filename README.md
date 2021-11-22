@@ -20,7 +20,7 @@
 sudo pacman -S --needed sway wofi waybar reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
 translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
-kanshi gnome-keyring alacritty pavucontrol playerctl
+kanshi gnome-keyring alacritty pavucontrol playerctl imv mpv
 sudo usermod -a -G video $USER
 ```
 2. clone dotfiles
@@ -90,12 +90,12 @@ aur sync nwg-launchers
 sudo pacman -S nwg-launchers
 aur sync wlsunset
 sudo pacman -S wlsunset
-aur sync autotiling-git
-sudo pacman -S autotiling-git
 aur sync azote
 sudo pacman -S azote
 aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
+aur sync epy-git
+sudo pacman -S epy-git
 ```
 9. run sway (from terminal) to ensure if everything is ok and reboot system
 ```

@@ -11,7 +11,7 @@
 }
 
 .modules-center {
-    background: @bg;
+    background: @bg-light;
     border-radius: 4;
 }
 
@@ -66,10 +66,10 @@ tooltip {
 }
 
 #clock, #custom-power, #battery, #cpu, #memory, #idle_inhibitor, #temperature, #custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #custom-pacman {
-    margin-right: 1px;
-    margin-left: 1px;
+    margin-right: 2px;
+    margin-left: 2px;
 
-    background-color: @bg;
+    background-color: @bg-light;
     border-radius: 4px;
 
     padding-left:10px;
@@ -118,7 +118,7 @@ tooltip {
 #custom-launcher{
     background-color: @accent;
     border-style: hidden;
-    color: @bg;
+    color: @bg-light;
     font-size: 13px;
     /* border-radius:  0 4 4 0; */
 }

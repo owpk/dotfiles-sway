@@ -7,14 +7,14 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term kitty
 set $term-float $term
 set $term-working-dir $term --working-directory=$( swaymsg -r -t get_tree | jq '.. | (.nodes? // empty)[] | select(.focused == true).pid? // empty' | xargs pstree -p | grep "\<tmux\>\|\<fish\>\|\<bash\>\|\<zsh\>\|\<sh\>" | grep -o '[1-9]*' | xargs pwdx 2> /dev/null | cut -f2- -d' ' | sort | tail -n 1 | tr -d '\n')
 set $menu wofi -c ~/.config/wofi/config -I
 set $launcher nwggrid
 set $powermenu nwgbar
 set $cheat gedit ~/.config/sway/cheatsheet
-set $filemanager alacritty -e ranger
+set $filemanager $term -e ranger
 
 # wob
 set $WOBSOCKET $XDG_RUNTIME_DIR/wob.sock
@@ -76,7 +76,7 @@ bindsym --to-code  {
    $mod+Shift+i         floating disable
 
    # n
-   $mod+n exec $filemanager
+   $mod+n               exec $filemanager
 
    # p
    $mod+p               exec ~/.config/wofi/windows.py
