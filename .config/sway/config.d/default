@@ -7,7 +7,7 @@ set $down j
 set $up k
 set $right l
 
-set $term kitty
+set $term alacritty
 set $term-float $term
 set $term-working-dir $term --working-directory=$( swaymsg -r -t get_tree | jq '.. | (.nodes? // empty)[] | select(.focused == true).pid? // empty' | xargs pstree -p | grep "\<tmux\>\|\<fish\>\|\<bash\>\|\<zsh\>\|\<sh\>" | grep -o '[1-9]*' | xargs pwdx 2> /dev/null | cut -f2- -d' ' | sort | tail -n 1 | tr -d '\n')
 set $menu wofi -c ~/.config/wofi/config -I

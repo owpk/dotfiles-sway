@@ -55,7 +55,6 @@ colors:
 #     cyan:    '#8abeb7'
 #     white:   '#ffffff'
 
-background_opacity: 0.97
 
 font:
   normal:
@@ -83,6 +82,7 @@ window:
   padding:
     x: 10
     y: 10
+  opacity: 0.9
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
