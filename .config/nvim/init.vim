@@ -7,31 +7,6 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
 endif
 
-call plug#begin('~/.config/nvim/plugged')
-Plug 'mhinz/vim-startify'
-Plug 'bagrat/vim-buffet'
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
-Plug 'godlygeek/tabular'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'arcticicestudio/nord-vim'
-Plug 'itchyny/lightline.vim'
-
-Plug 'rust-lang/rust.vim'
-Plug 'cespare/vim-toml'
-Plug 'plasticboy/vim-markdown'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'ap/vim-css-color'
-
-Plug 'tpope/vim-surround'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'jreybert/vimagit'
-Plug 'LukeSmithxyz/vimling'
-Plug 'vimwiki/vimwiki'
-Plug 'tpope/vim-commentary'
-call plug#end()
 
 set go=a
 set mouse=a
@@ -48,7 +23,6 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set cursorline                          " Enable highlighting of the current line
-
 
 " Some basics:
 	nnoremap c "_c
@@ -252,23 +226,46 @@ nmap <leader>t :TagbarToggle<CR>
 " }
 
 " Plugins {
-" vim-plug
-   call plug#begin('~/.vim/bundle')
-      Plug 'BrandonRoehl/auto-omni'
-      " Plug 'artur-shaik/vim-javacomplete2'
+
+   " vim-plug
+   call plug#begin('~/.config/nvim/plugged')
+      Plug 'mhinz/vim-startify'
+      Plug 'bagrat/vim-buffet'
+      Plug 'majutsushi/tagbar'
+      Plug 'scrooloose/nerdtree'
+      Plug 'godlygeek/tabular'
+      Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
+      Plug 'neoclide/coc.nvim', {'branch': 'release'}
+      Plug 'arcticicestudio/nord-vim'
+      Plug 'itchyny/lightline.vim'
+
+      Plug 'rust-lang/rust.vim'
+      Plug 'cespare/vim-toml'
+      Plug 'plasticboy/vim-markdown'
+      Plug 'dracula/vim', { 'as': 'dracula' }
+      Plug 'ap/vim-css-color'
+
+      Plug 'tpope/vim-surround'
+      Plug 'rbgrouleff/bclose.vim'
+      Plug 'jreybert/vimagit'
+      Plug 'LukeSmithxyz/vimling'
+      Plug 'vimwiki/vimwiki'
+      Plug 'tpope/vim-commentary'
    call plug#end()
 
   " vundle
    call vundle#begin()
-  "   Plugin 'ycm-core/YouCompleteMe'
       Plugin 'preservim/nerdtree'
       Plugin 'iamcco/markdown-preview.nvim'
       Plugin 'chrisbra/Colorizer'
       Plugin 'jiangmiao/auto-pairs'
       Plugin 'ryanoasis/vim-devicons'
-      " Plugin 'uiiaoo/java-syntax.vim'
       Bundle 'https://github.com/etdev/vim-hexcolor.git'
-      call vundle#end()
+   call vundle#end()
+
+   " packer
+   lua require('plugins')
 " }
 
 " required for transparent bg
