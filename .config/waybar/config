@@ -1,7 +1,6 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 10,
 
     "modules-left": ["tray", "custom/launcher", "sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["custom/stub", "custom/spotify", "custom/weather", "clock", "custom/stub"],
@@ -28,6 +27,7 @@
     },
 
     "sway/window": {
+        "icon": false,
         "format": "{}"
     },
 
@@ -40,7 +40,7 @@
     },
 
     "tray": {
-        "icon-size": 15,
+        "icon-size": 14,
         "spacing": 5
     },
 
