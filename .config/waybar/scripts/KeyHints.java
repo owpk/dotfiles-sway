@@ -19,7 +19,7 @@ public class KeyHints {
 
         var lines = Files.lines(Paths.get(args[0]))
                 .map(String::strip)
-                .filter(x -> x.startsWith("bindsym") && x.contains("$mod"))
+                .filter(x -> x.contains("$mod"))
                 .map(x -> x.replaceAll("[ |\t]+", " ")
                         .replaceAll("\"", "").substring(x.indexOf("$"))).collect(Collectors.toList());
 

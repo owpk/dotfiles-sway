@@ -50,5 +50,6 @@ return require('packer').startup(function()
 	-- vim-plug
 	use 'preservim/nerdtree'
   use 'ryanoasis/vim-devicons'
+	use '907th/vim-auto-save'
 
 end)
