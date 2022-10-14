@@ -6,13 +6,13 @@ touch /etc/locale.conf
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 touch /etc/hostname
 echo "owpk" > /etc/hostname
-echo "127.0.0.1	localhost" >> /etc/hosts
-echo "::1	      localhost" >> /etc/hosts
+echo "127.0.0.1	  localhost" >> /etc/hosts
+echo "::1	        localhost" >> /etc/hosts
 echo "127.0.1.1   owpk.localdomain  owpk" >> /etc/hosts
 
 pacman -S --needed networkmanager network-manager-applet bluez bluez-utils wireless_tools \
 wpa_supplicant dialog reflector mtools vim neovim snapper os-prober grub efibootmgr zsh alacritty \
-vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell  pamixer
+vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell pamixer
 
 echo "enter root password:"
 passwd
@@ -39,14 +39,17 @@ chsh -s /bin/zsh owpk
 
 git clone https://github.com/owpk/dotfiles-sway /home/owpk/dotfiles-sway
 chown -R owpk:users /home/owpk/dotfiles-sway
+
 HOME=/home/owpk
 DOT=$HOME/dotfiles-sway
 mkdir /usr/share/fonts/TTF
 cp $DOT/fonts/* /usr/share/fonts/TTF/
 fc-cache
+
 runuser -l owpk -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 runuser -l owpk -c 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k'
 runuser -l owpk -c 'git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions'
+
 rm $HOME/.config 2> /dev/null
 ln -s $DOT/.config $HOME/.config
 rm $HOME/.p10k.zsh 2> /dev/null

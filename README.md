@@ -1,5 +1,3 @@
-
-- SWITCH BETWEEN master AND waybar_gaps_css_theme GIT BRANCHES TO SWITCH WAYBAR THEME
 - SEE .config/sway/config.d/input TO CHANGE KEYBOARD LAYOUT AND OTHER KB SETTINGS
 - SEE .config/sway/config.d/default TO CHANGE KEY BINDINGS CONFIG
 
@@ -94,8 +92,6 @@ aur sync azote
 sudo pacman -S azote
 aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
-aur sync epy-git
-sudo pacman -S epy-git
 ```
 9. run sway (from terminal) to ensure if everything is ok and reboot system
 ```
