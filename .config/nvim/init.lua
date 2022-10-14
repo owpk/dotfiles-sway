@@ -15,12 +15,12 @@ require('plugins')
 -- require('fzf-config')
 -- require('diffview-config')
 require('autotag-config')
--- require('nvim-ts-autotag').setup({
---   filetypes = { "html" , "xml", "javascriptreact", "typescriptreact", "tsx", "typescript.tsx" },
--- })
+require('nvim-ts-autotag').setup({
+  filetypes = { "html" , "xml", "javascriptreact", "typescriptreact", "tsx", "typescript.tsx" },
+})
 require('lsp-config')
 require('cmp-config')
-require('ale-config')
+--require('ale-config')
 require('kommentary-config')
 require('treesitter-config')
 require('nerdtree-config')
