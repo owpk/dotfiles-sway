@@ -22,7 +22,7 @@ require('lsp-config')
 require('cmp-config')
 --require('ale-config')
 require('kommentary-config')
-require('treesitter-config')
+--require('treesitter-config')
 require('nerdtree-config')
 -- require('stay-centered')
 
