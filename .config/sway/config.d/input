@@ -6,7 +6,7 @@ input type:keyboard {
 }
 
 input type:touchpad {
-      dwt enabled
+      dwt disable
       tap enabled
       natural_scroll disable
 }
