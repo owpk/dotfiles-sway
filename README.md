@@ -59,11 +59,13 @@ makepkg -si
 ```
 
 7. configure custom pacman repository
+ - switch to root user first
 ```
+su root
 CUSTOM=/etc/pacman.d/custom
-sudo touch $CUSTOM
+touch $CUSTOM
 
-sudo cat >> $CUSTOM << EOF
+cat >> $CUSTOM << EOF
 '[options]'
 'CacheDir = /var/cache/pacman/pkg'
 'CacheDir = /var/cache/pacman/custom'
@@ -74,7 +76,11 @@ sudo cat >> $CUSTOM << EOF
 'Server = file:///var/cache/pacman/custom'
 EOF
 
-sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+```
+- switch to your user
+```
+su your_user_name 
 install -d /var/cache/pacman/custom -o $USER
 repo-add /var/cache/pacman/custom/custom.db.tar
 sudo pacman -Syu
