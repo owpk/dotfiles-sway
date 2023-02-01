@@ -104,6 +104,7 @@ sudo pacman -S networkmanager-dmenu-git
 sway
 reboot
 ```
+10. use 'azote' to change background image 😺
 
 # useful links
 - sway wm
