@@ -75,8 +75,8 @@ sudo cat >> $CUSTOM << EOF
 EOF
 
 sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
-sudo install -d /var/cache/pacman/custom -o $USER
-sudo repo-add /var/cache/pacman/custom/custom.db.tar
+install -d /var/cache/pacman/custom -o $USER
+repo-add /var/cache/pacman/custom/custom.db.tar
 sudo pacman -Syu
 ```
 8. install menus/toolbars/utils etc for sway
