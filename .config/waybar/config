@@ -3,7 +3,7 @@
     "position": "top",
 
     "modules-left": ["tray", "custom/launcher", "sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["custom/stub", "custom/spotify", "custom/weather", "clock", "custom/stub"],
+    "modules-center": ["custom/stub", "custom/spotify", "custom/weather", "clock", "custom/vnc", "custom/stub"],
     "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio",  "custom/power"],
 
     "sway/workspaces": {
@@ -163,10 +163,18 @@
       	"tooltip": false,
     },
 
+    "custom/vnc": {
+         "format": "🖥{}",
+         "exec": "$HOME/.config/sway/scripts/vnc_server.sh",
+         "on-click": "$HOME/.config/sway/scripts/vnc_server.sh $(cat /tmp/VNC_CHANGE_STATE_VAR)",
+         "interval": "once",
+         "signal": 5
+    },
+
      // to find keyboard identifier use "swaymsg -t get_inputs"
     "custom/keyboard-layout": {
          "format": " {}",
-      	"tooltip": false,
+      	 "tooltip": false,
          "exec": "$HOME/.config/waybar/scripts/kblayout.sh"
          // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '1:1:AT_Translated_Set_2_keyboard'"

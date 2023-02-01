@@ -46,10 +46,8 @@ alias gclip="xclip -o"
 alias awmenu="curl -s https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/icon-list.txt | wofi --dmenu -i -markup-rows -p "" -columns 6 -width 100 -location 1 -lines 20 -bw 2 -yoffset -2 | cut -d\' -f2"
 alias dckd="sudo systemctl start docker"
 alias dckds="sudo systemctl stop docker"
-alias trns="wl-paste | trans -b -t $1"
 alias hs="history | grep $1"
 alias supd="sudo pacman -Syyu"
-alias idea="~/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/211.7628.21/bin/idea.sh"
 #alias aur="curl https://aur.archlinux.org/packages.gz | gzip -cd"
 #alias idea-ce="DRI_PRIME=1 idea"
 
@@ -61,7 +59,10 @@ source $ZSH/oh-my-zsh.sh
 alias lls="ls -la --group-directories-first -h -S"
 alias ll="ls -la --group-directories-first -h"
 alias vim="nvim"
-alias jhelp="java -jar ~/gh/spar/jenkins-cli.jar -s http://jenkins.ctmol.ru/ -auth owpk:116a1bd02b33b7436257c0701c99beb08c build JOB @"
+alias jhelp="java -jar ~/gh/spar/jenkins-cli.jar -s http://jenkins.ctmol.ru/ -auth owpk:116a1bd02b33b7436257c0701c99beb08c build JOB $@"
+alias idea="$HOME/.local/share/JetBrains/Toolbox/scripts/idea"
+alias fleet="$HOME/.local/share/JetBrains/Toolbox/scripts/fleet"
+alias pycharm="$HOME/.local/share/JetBrains/Toolbox/scripts/pycharm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
