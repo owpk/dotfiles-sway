@@ -1,12 +1,17 @@
+tooltip_msg="vnc server status"
+OFF_MSG="off"
+ON_MSG="on"
 VNC_CHANGE_STATE_VAR=/tmp/VNC_CHANGE_STATE_VAR
 VNC_PID=$(pgrep wayvnc)
 
 function echoOn() {
-		echo "on"
+		printf "{ \"text\": \"%s\", \"tooltip\": \"%s\" }\n" \
+       "$ON_MSG" "$tooltip_msg" 
 }
 
 function echoOff() {
-		echo "off"
+		printf "{ \"text\": \"%s\", \"tooltip\": \"%s\" }\n" \
+       "$OFF_MSG" "$tooltip_msg" 
 }
 
 function setStateOn() {
