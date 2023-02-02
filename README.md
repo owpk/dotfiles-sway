@@ -126,6 +126,6 @@ https://github.com/francma/wob
 
 # issues
 
-- vmware: black screen after sway launch 
+- vmware: black screen after sway launch   
 	adding WLR_NO_HARDWARE_CURSORS=1 to /etc/environment may fix the problem
 
