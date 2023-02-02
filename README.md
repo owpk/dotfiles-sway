@@ -15,7 +15,7 @@
 
 1. install all needed apps
 ```
-sudo pacman -S --needed cmake cmocka sway ranger wofi waybar reflector mtools vim neovim zsh vifm \
+sudo pacman -S --needed jq cmake cmocka sway ranger wofi waybar reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
 translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
 kanshi gnome-keyring alacritty kitty pavucontrol playerctl imv mpv wayvnc
@@ -108,7 +108,14 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 sway
 reboot
 ```
-10. use 'azote' to change background image 😺
+
+10. change background image 
+```
+pkill swaybg
+MONITOR="$(swaymsg -t get_outputs | jq -r '.[] | {name} | (.name)')"
+swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
+```
+ - or use 'azote' app to do the same as above 😺  
 
 # useful links
 - sway wm
