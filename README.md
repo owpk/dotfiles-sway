@@ -15,7 +15,7 @@
 
 1. install all needed apps
 ```
-sudo pacman -S --needed cmake cmocka sway wofi waybar reflector mtools vim neovim zsh vifm \
+sudo pacman -S --needed cmake cmocka sway ranger wofi waybar reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
 translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
 kanshi gnome-keyring alacritty kitty pavucontrol playerctl imv mpv wayvnc
@@ -99,6 +99,10 @@ sudo pacman -S azote
 aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```
+8.1 (Optional) install ranger devicons
+```
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+```
 9. run sway (from terminal) to ensure if everything is ok and reboot system
 ```
 sway
@@ -119,3 +123,9 @@ https://github.com/emersion/mako
 https://github.com/nwg-piotr/nwg-launchers
 - wob (wayland overlay bar)
 https://github.com/francma/wob
+
+# issues
+
+- vmware: black screen after sway launch 
+	adding WLR_NO_HARDWARE_CURSORS=1 to /etc/environment may fix the problem
+
