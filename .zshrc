@@ -34,6 +34,7 @@ bindkey '^ ' autosuggest-accept
 # PLUGS
 plugins=(
    zsh-autosuggestions
+	 archlinux
 )
 
 # ALIASES

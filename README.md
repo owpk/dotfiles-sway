@@ -114,7 +114,7 @@ reboot
 ```
 pkill swaybg
 MONITOR="$(swaymsg -t get_outputs | jq -r '.[] | {name} | (.name)')"
-swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
+nohup swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
 ```
  - or use 'azote' app to do the same as above 😺  
 
