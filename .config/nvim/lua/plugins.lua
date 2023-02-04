@@ -1,16 +1,17 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-
- use {
-   'nvim-treesitter/nvim-treesitter',
-   run = ':TSUpdate'
- }
-
-  use 'neovim/nvim-lspconfig'
-
+  use 'nvim-treesitter/nvim-treesitter'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/nvim-cmp'
+  use "nvim-lua/plenary.nvim"
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- LSP 
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
+  use 'mfussenegger/nvim-jdtls'
 
   -- use 'dense-analysis/ale'
   

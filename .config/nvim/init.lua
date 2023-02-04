@@ -1,30 +1,21 @@
--- COLORS
--- vim.cmd 'colo fogbell_light'
--- vim.cmd 'colo fogbell'
--- vim.cmd 'colo 256_noir'
--- vim.cmd 'colo spacecamp'
--- vim.cmd 'colo PaperColor'
-
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_transparent = true
 vim.cmd[[colorscheme tokyonight]]
--- vim.cmd[[colorscheme catppuccin]]
 
 require('plugins')
 -- CONFIGS
 -- require('fzf-config')
--- require('diffview-config')
 require('autotag-config')
 require('nvim-ts-autotag').setup({
   filetypes = { "html" , "xml", "javascriptreact", "typescriptreact", "tsx", "typescript.tsx" },
 })
-require('lsp-config')
+require ("user.telescope")
+require ("user.lsp-inlayhints")
+require('user.treesitter')
+
 require('cmp-config')
---require('ale-config')
 require('kommentary-config')
---require('treesitter-config')
 require('nerdtree-config')
--- require('stay-centered')
 
 -- SETUP
 local so = vim.api.nvim_set_option
