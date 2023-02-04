@@ -16,6 +16,6 @@
 !/.config/wofi
 !/.config/kitty
 !/scripts
-.config/ranger/plugins/__pycache__/*
-.config/ranger/plugins/ranger_devicons/__pycache__/*
-.vim/bundle/vim-devicons
+__pycache__/
+/.config/ranger/plugins/*
+.azotebg

@@ -15,7 +15,8 @@
 
 1. install all needed apps
 ```
-sudo pacman -S --needed sway wofi waybar reflector mtools vim neovim zsh vifm \
+sudo pacman -S --needed swaybg jq cmake cmocka sway ranger wofi waybar \
+reflector mtools vim neovim zsh vifm \
 papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
 translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
 kanshi gnome-keyring alacritty kitty pavucontrol playerctl imv mpv wayvnc
@@ -59,11 +60,13 @@ makepkg -si
 ```
 
 7. configure custom pacman repository
+ - switch to root user first
 ```
+su root
 CUSTOM=/etc/pacman.d/custom
-sudo touch $CUSTOM
+touch $CUSTOM
 
-sudo cat >> $CUSTOM << EOF
+cat >> $CUSTOM << EOF
 '[options]'
 'CacheDir = /var/cache/pacman/pkg'
 'CacheDir = /var/cache/pacman/custom'
@@ -74,7 +77,11 @@ sudo cat >> $CUSTOM << EOF
 'Server = file:///var/cache/pacman/custom'
 EOF
 
-sudo echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
+```
+- switch to your user
+```
+su your_user_name 
 install -d /var/cache/pacman/custom -o $USER
 repo-add /var/cache/pacman/custom/custom.db.tar
 sudo pacman -Syu
@@ -93,11 +100,23 @@ sudo pacman -S azote
 aur sync networkmanager-dmenu-git
 sudo pacman -S networkmanager-dmenu-git
 ```
+8.1 (Optional) install ranger devicons
+```
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+```
 9. run sway (from terminal) to ensure if everything is ok and reboot system
 ```
 sway
 reboot
 ```
+
+10. change background image 
+```
+pkill swaybg
+MONITOR="$(swaymsg -t get_outputs | jq -r '.[] | {name} | (.name)')"
+nohup swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
+```
+ - or use 'azote' app to do the same as above 😺  
 
 # useful links
 - sway wm
@@ -112,3 +131,9 @@ https://github.com/emersion/mako
 https://github.com/nwg-piotr/nwg-launchers
 - wob (wayland overlay bar)
 https://github.com/francma/wob
+
+# issues
+
+- vmware: black screen after sway launch   
+	adding WLR_NO_HARDWARE_CURSORS=1 to /etc/environment may fix the problem
+

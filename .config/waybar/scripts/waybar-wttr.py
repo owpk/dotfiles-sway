@@ -2,6 +2,8 @@
 
 import json
 import requests
+import user_location
+
 from datetime import datetime
 
 WEATHER_CODES = {
@@ -57,9 +59,8 @@ WEATHER_CODES = {
 
 data = {}
 
-
-
-weather = requests.get("https://wttr.in/?format=j1&location=Irkutsk").json()
+user_loc = user_location.get_location()
+weather = requests.get("https://wttr.in/?format=j1&location={}".format(user_loc)).json()
 
 
 def format_time(time):
