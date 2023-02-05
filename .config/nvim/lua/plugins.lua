@@ -12,9 +12,23 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'mfussenegger/nvim-jdtls'
+  use "j-hui/fidget.nvim" -- Standalone UI for nvim-lsp progress.
+  use "lvimuser/lsp-inlayhints.nvim" -- Partial implementation of LSP inlay hint.
+  use "https://git.sr.ht/~whynothugo/lsp_lines.nvim" --  renders diagnostics using virtual lines
+  use "jose-elias-alvarez/null-ls.nvim"
 
+  use {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require "user.copilot"
+      end, 100)
+    end,
+  }
   -- use 'dense-analysis/ale'
   
+  use "RRethy/vim-illuminate" --automatically highlighting other uses of the word 
   use {
     'junegunn/fzf',
     requires = { 'junegunn/fzf.vim' }

@@ -9,14 +9,22 @@ require('autotag-config')
 require('nvim-ts-autotag').setup({
   filetypes = { "html" , "xml", "javascriptreact", "typescriptreact", "tsx", "typescript.tsx" },
 })
-require ("user.telescope")
-require ("user.lsp-inlayhints")
+require("user.telescope")
+require("user.lsp-inlayhints")
+require("user.lsp")
 require('user.treesitter')
+require('user.dap')
+require('user.copilot')
+require('user.auto-session')
+require('user.alpha')
+require('user.illuminate')
+require('user.notify')
+require('user.toggleterm')
+require('user.spectre')
 
 require('cmp-config')
 require('kommentary-config')
 require('nerdtree-config')
-
 -- SETUP
 local so = vim.api.nvim_set_option
 
@@ -74,3 +82,5 @@ vim.api.nvim_set_var('fzf_preview_window', 'right:50%:bottom')
 
 -- emmit
 vim.api.nvim_set_var('user_emmet_leader_key', '<C-A>')
+
+reload "user.lualine"
