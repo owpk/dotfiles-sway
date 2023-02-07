@@ -114,7 +114,7 @@ run = "./install.sh" }
 
   -- Marks
   use "christianchiarulli/harpoon"
-  use "MattesGroeger/vim-bookmarks"
+  --use "MattesGroeger/vim-bookmarks"
 
   -- Fuzzy Finder/Telescope
   use "nvim-telescope/telescope.nvim"
@@ -169,8 +169,8 @@ run = "./install.sh" }
   use "lukas-reineke/indent-blankline.nvim"
 
   -- File Explorer
-  use "kyazdani42/nvim-tree.lua"
-  use "christianchiarulli/lir.nvim"
+  --use "kyazdani42/nvim-tree.lua"
+  --use "christianchiarulli/lir.nvim"
 
   -- Comment
   use "numToStr/Comment.nvim"
@@ -214,7 +214,7 @@ run = "./install.sh" }
   use "andymass/vim-matchup"
   use "folke/zen-mode.nvim"
   -- use "Pocco81/true-zen.nvim"
-  use "karb94/neoscroll.nvim"
+  --use "karb94/neoscroll.nvim"
   use "junegunn/vim-slash"
 
   -- Motion
@@ -222,7 +222,7 @@ run = "./install.sh" }
   -- use "jinh0/eyeliner.nvim"
 
   -- Keybinding
-  use "folke/which-key.nvim"
+  --use "folke/which-key.nvim"
 
   -- Java
   use "mfussenegger/nvim-jdtls"
@@ -247,7 +247,8 @@ run = "./install.sh" }
     requires = { 'junegunn/fzf.vim' }
   }
   use 'ryanoasis/vim-devicons'
-
+  use 'cormacrelf/vim-colors-github'
+    
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

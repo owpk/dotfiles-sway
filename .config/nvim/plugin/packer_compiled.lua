@@ -252,11 +252,6 @@ _G.packer_plugins = {
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/lab.nvim",
     url = "https://github.com/0x100101/lab.nvim"
   },
-  ["lir.nvim"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/lir.nvim",
-    url = "https://github.com/christianchiarulli/lir.nvim"
-  },
   ["lsp-inlayhints.nvim"] = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/lsp-inlayhints.nvim",
@@ -378,11 +373,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
-  },
-  ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -520,6 +510,16 @@ _G.packer_plugins = {
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/vim-bookmarks",
     url = "https://github.com/MattesGroeger/vim-bookmarks"
   },
+  ["vim-colors-github"] = {
+    loaded = true,
+    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/vim-colors-github",
+    url = "https://github.com/cormacrelf/vim-colors-github"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
+  },
   ["vim-gist"] = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/vim-gist",
@@ -544,11 +544,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/webapi-vim",
     url = "https://github.com/mattn/webapi-vim"
-  },
-  ["which-key.nvim"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   },
   ["zen-mode.nvim"] = {
     loaded = true,
