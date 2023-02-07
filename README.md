@@ -59,33 +59,19 @@ cd aurutils
 makepkg -si
 ```
 
-7. configure custom pacman repository
- - switch to root user first
+7. install 'aura'
+ - install Haskell Tool Stack
 ```
-su root
-CUSTOM=/etc/pacman.d/custom
-touch $CUSTOM
+curl -sSL https://get.haskellstack.org/ | sh
+```
+ - building from source
+```
+git clone https://github.com/fosskers/aura.git
+cd aura
+stack install -- aura
+```
+ - aura binary will be available in '/home/YOU/.local/bin/'
 
-cat >> $CUSTOM << EOF
-'[options]'
-'CacheDir = /var/cache/pacman/pkg'
-'CacheDir = /var/cache/pacman/custom'
-'CleanMethod = KeepCurrent'
-
-'[custom]'
-'SigLevel = Optional TrustAll'
-'Server = file:///var/cache/pacman/custom'
-EOF
-
-echo 'Include = /etc/pacman.d/custom' >> /etc/pacman.conf
-```
-- switch to your user
-```
-su your_user_name 
-install -d /var/cache/pacman/custom -o $USER
-repo-add /var/cache/pacman/custom/custom.db.tar
-sudo pacman -Syu
-```
 8. install menus/toolbars/utils etc for sway
  - install last app if you have networkmanager installed
 ```
@@ -119,18 +105,13 @@ nohup swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
  - or use 'azote' app to do the same as above 😺  
 
 # useful links
-- sway wm
-https://github.com/swaywm/sway
-- waybar (status bar)
-https://github.com/Alexays/Waybar
-- wofi (menus/launchers)
-https://hg.sr.ht/~scoopta/wofi
-- mako (wayland notification daemon)
-https://github.com/emersion/mako
-- nwg-launchers (menus/launchers)
-https://github.com/nwg-piotr/nwg-launchers
-- wob (wayland overlay bar)
-https://github.com/francma/wob
+- (sway wm)[https://github.com/swaywm/sway]
+- (waybar (status bar))[https://github.com/Alexays/Waybar]
+- (wofi (menus/launchers))[https://hg.sr.ht/~scoopta/wofi]
+- (mako (wayland notification daemon))[https://github.com/emersion/mako]
+- (nwg-launchers (menus/launchers))[https://github.com/nwg-piotr/nwg-launchers]
+- (wob (wayland overlay bar))[https://github.com/francma/wob]
+- (aura (AUR helper))[https://github.com/fosskers/aura]
 
 # issues
 
