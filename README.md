@@ -60,17 +60,13 @@ makepkg -si
 ```
 
 7. install 'aura'
- - install Haskell Tool Stack
+
 ```
-curl -sSL https://get.haskellstack.org/ | sh
+git clone https://aur.archlinux.org/aura-bin.git
+cd aura-bin
+makepkg
+sudo pacman -U <the-package-file-that-makepkg-produces>
 ```
- - building from source
-```
-git clone https://github.com/fosskers/aura.git
-cd aura
-stack install -- aura
-```
- - aura binary will be available in '/home/YOU/.local/bin/'
 
 8. install menus/toolbars/utils etc for sway
  - install last app if you have networkmanager installed
