@@ -71,18 +71,14 @@ sudo pacman -U <the-package-file-that-makepkg-produces>
 8. install menus/toolbars/utils etc for sway
  - install last app if you have networkmanager installed
 ```
-aur sync wob-git
-sudo pacman -S wob-git
-aur sync nwg-launchers
-sudo pacman -S nwg-launchers
-aur sync wlsunset
-sudo pacman -S wlsunset
-aur sync azote
-sudo pacman -S azote
-aur sync networkmanager-dmenu-git
-sudo pacman -S networkmanager-dmenu-git
+sudo aura -A wob
+sudo aura -A nwg-launchers
+sudo aura -A wlsunset
+sudo aura -A azote
+sudo aura -A networkmanager-dmenu-git
 ```
-8.1 (Optional) install ranger devicons
+
+8.1. (Optional) install ranger devicons
 ```
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
