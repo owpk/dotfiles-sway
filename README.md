@@ -97,13 +97,13 @@ nohup swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
  - or use 'azote' app to do the same as above 😺  
 
 # useful links
-- (sway wm)[https://github.com/swaywm/sway]
-- (waybar (status bar))[https://github.com/Alexays/Waybar]
-- (wofi (menus/launchers))[https://hg.sr.ht/~scoopta/wofi]
-- (mako (wayland notification daemon))[https://github.com/emersion/mako]
-- (nwg-launchers (menus/launchers))[https://github.com/nwg-piotr/nwg-launchers]
-- (wob (wayland overlay bar))[https://github.com/francma/wob]
-- (aura (AUR helper))[https://github.com/fosskers/aura]
+- [sway wm](https://github.com/swaywm/sway)
+- [waybar (status bar)](https://github.com/Alexays/Waybar)
+- [wofi (menus/launchers)](https://hg.sr.ht/~scoopta/wofi)
+- [mako (wayland notification daemon)](https://github.com/emersion/mako)
+- [nwg-launchers (menus/launchers)](https://github.com/nwg-piotr/nwg-launchers)
+- [wob (wayland overlay bar)](https://github.com/francma/wob)
+- [aura (AUR helper)](https://github.com/fosskers/aura)
 
 # issues
 
