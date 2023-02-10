@@ -12,9 +12,12 @@ so('shiftwidth', 2)
 so('updatetime', 100)
 so('ttimeoutlen', 10)
 
-vim.o.sw = 4
-vim.o.tabstop = 4
-vim.o.sts = 0
+local tab_width = 4
+
+vim.bo.tabstop = tab_width
+vim.bo.shiftwidth = tab_width
+vim.bo.expandtab = true
+
 vim.o.signcolumn = 'no'
 vim.o.hidden = true
 vim.o.ignorecase = true
