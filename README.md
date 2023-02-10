@@ -65,7 +65,7 @@ makepkg -si
 git clone https://aur.archlinux.org/aura-bin.git
 cd aura-bin
 makepkg
-sudo pacman -U <the-package-file-that-makepkg-produces>
+sudo pacman -U *.tar.zst
 ```
 
 8. install menus/toolbars/utils etc for sway
