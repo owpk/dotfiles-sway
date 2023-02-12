@@ -62,18 +62,17 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 -- SETUP
-local so = vim.api.nvim_set_option
-
-so('bk', false)
-so('wb', false)
-so('swf', false)
-so('cot', 'menu,menuone,noselect')
-so('clipboard', 'unnamedplus')
-so('expandtab', true)
-so('laststatus', 2)
-so('shiftwidth', 2)
-so('updatetime', 100)
-so('ttimeoutlen', 10)
+--local so = vim.api.nvim_set_option
+--
+--so('bk', false)
+--so('wb', false)
+--so('swf', false)
+--so('cot', 'menu,menuone,noselect')
+--so('clipboard', 'unnamedplus')
+--so('expandtab', true)
+--so('laststatus', 2)
+--so('updatetime', 100)
+--so('ttimeoutlen', 10)
 
 
 vim.call('matchadd', 'WarningMsg', "\\%81v", 3)
