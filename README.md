@@ -52,14 +52,8 @@ ln -s `pwd`/.config ~/.config
 mv ~/.vim ~/.vim.bak 2> /dev/null
 ln -s `pwd`/.vim ~/.vim
 ```
-6. insatll aurutils
-```
-git clone https://aur.archlinux.org/aurutils.git
-cd aurutils
-makepkg -si
-```
 
-7. install 'aura'
+6. install 'aura'
 
 ```
 git clone https://aur.archlinux.org/aura-bin.git
@@ -68,7 +62,7 @@ makepkg
 sudo pacman -U *.tar.zst
 ```
 
-8. install menus/toolbars/utils etc for sway
+7. install menus/toolbars/utils etc for sway
  - install last app if you have networkmanager installed
 ```
 sudo aura -A wob
@@ -78,17 +72,17 @@ sudo aura -A azote
 sudo aura -A networkmanager-dmenu-git
 ```
 
-8.1. (Optional) install ranger devicons
+7.1. (Optional) install ranger devicons
 ```
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
-9. run sway (from terminal) to ensure if everything is ok and reboot system
+8. run sway (from terminal) to ensure if everything is ok and reboot system
 ```
 sway
 reboot
 ```
 
-10. change background image 
+9. change background image 
 ```
 pkill swaybg
 MONITOR="$(swaymsg -t get_outputs | jq -r '.[] | {name} | (.name)')"
