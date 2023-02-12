@@ -62,15 +62,15 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   use "b0o/SchemaStore.nvim"
   -- use "github/copilot.vim"
-  use {
-    "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require "user.copilot"
-      end, 100)
-    end,
-  }
+  --use {
+  --  "zbirenbaum/copilot.lua",
+  --  event = { "VimEnter" },
+  --  config = function()
+  --    vim.defer_fn(function()
+  --      require "user.copilot"
+  --    end, 100)
+  --  end,
+  --}
   use "RRethy/vim-illuminate"
   use "j-hui/fidget.nvim"
   use "lvimuser/lsp-inlayhints.nvim"
