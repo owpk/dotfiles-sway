@@ -22,8 +22,8 @@ local options = {
   updatetime = 100,                       -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
   expandtab = true,                        -- convert tabs to spaces
-  shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-  tabstop = 2,                             -- insert 2 spaces for a tab
+  shiftwidth = 4,                          -- the number of spaces inserted for each indentation
+  tabstop = 4,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
   laststatus = 3,
@@ -61,6 +61,30 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
+-- SETUP
+local so = vim.api.nvim_set_option
+
+so('bk', false)
+so('wb', false)
+so('swf', false)
+so('cot', 'menu,menuone,noselect')
+so('clipboard', 'unnamedplus')
+so('expandtab', true)
+so('laststatus', 2)
+so('shiftwidth', 2)
+so('updatetime', 100)
+so('ttimeoutlen', 10)
+
+
+vim.call('matchadd', 'WarningMsg', "\\%81v", 3)
+
+-- vimwiki
+vim.api.nvim_set_var('vimwiki_list', { {
+  path = '~/Documents/vimwiki',  
+  -- syntax = 'markdown',
+  -- ext = '.md'
+} })
+  
 vim.filetype.add {
   extension = {
     conf = "dosini",

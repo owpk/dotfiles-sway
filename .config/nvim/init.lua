@@ -21,9 +21,9 @@ require "user.impatient"
 require "user.indentline"
 require "user.alpha"
 --require "user.whichkey"
-require "user.matchup"
-require "user.numb"
-require "user.dial"
+--require "user.matchup"
+--require "user.numb"
+--require "user.dial"
 --require "user.colorizer"
 --require "user.spectre"
 --require "user.zen-mode"
@@ -36,7 +36,7 @@ require "user.gist"
 require "user.gitlinker"
 --require "user.notify"
 require "user.ts-context"
-require "user.registers"
+--require "user.registers"
 require "user.sniprun"
 require "user.functions"
 require "user.illuminate"
@@ -59,3 +59,13 @@ require "user.surround"
 require "user.lab"
 --require "user.vim-slash"
 require "user.keymaps"
+
+local registers = require("registers")
+        registers.setup({
+  hide_only_whitespace = true,
+  show_empty = true,
+  trim_whitespace = true,
+  window = {
+    border = "rounded"
+  }
+})

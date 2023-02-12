@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/SchemaStore.nvim",
     url = "https://github.com/b0o/SchemaStore.nvim"
   },
-  ["alpha-nvim"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/alpha-nvim",
-    url = "https://github.com/goolord/alpha-nvim"
-  },
   ["auto-session"] = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/auto-session",
@@ -146,11 +141,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
-  },
-  ["dial.nvim"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/dial.nvim",
-    url = "https://github.com/monaqa/dial.nvim"
   },
   ["dressing.nvim"] = {
     loaded = true,
@@ -248,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  ["numb.nvim"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/numb.nvim",
-    url = "https://github.com/nacro90/numb.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -439,11 +424,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
-  },
-  ["vim-matchup"] = {
-    loaded = true,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/vim-matchup",
-    url = "https://github.com/andymass/vim-matchup"
   },
   ["webapi-vim"] = {
     loaded = true,

@@ -160,7 +160,7 @@ return packer.startup(function(use)
   --use "christianchiarulli/lualine.nvim"
 
   -- Startup
-  use "goolord/alpha-nvim"
+  --use "goolord/alpha-nvim"
 
   -- Indent
   use "lukas-reineke/indent-blankline.nvim"
@@ -206,9 +206,9 @@ return packer.startup(function(use)
 
   -- Editing Support
   use "windwp/nvim-autopairs"
-  use "monaqa/dial.nvim"
-  use "nacro90/numb.nvim"
-  use "andymass/vim-matchup"
+  --use "monaqa/dial.nvim"
+  --use "nacro90/numb.nvim"
+  --use "andymass/vim-matchup"
   --use "folke/zen-mode.nvim"
   -- use "Pocco81/true-zen.nvim"
   --use "karb94/neoscroll.nvim"
