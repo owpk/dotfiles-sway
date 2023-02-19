@@ -17,7 +17,7 @@ set $cheat gedit ~/.config/sway/cheatsheet
 set $filemanager kitty -e ranger
 
 # wob
-set $WOBSOCKET $XDG_RUNTIME_DIR/wob.sock
+set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
 ### Idle configuration

@@ -49,31 +49,28 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
 
   -- Lua Development
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "nvim-lua/popup.nvim"
   use "christianchiarulli/lua-dev.nvim"
-  -- use "folke/lua-dev.nvim"
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "williamboman/mason.nvim"
-  use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "ray-x/lsp_signature.nvim"
   use "SmiteshP/nvim-navic"
   use "simrat39/symbols-outline.nvim"
   use "b0o/SchemaStore.nvim"
   -- use "github/copilot.vim"
-  use {
-    "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require "user.copilot"
-      end, 100)
-    end,
-  }
+  --use {
+  --  "zbirenbaum/copilot.lua",
+  --  event = { "VimEnter" },
+  --  config = function()
+  --    vim.defer_fn(function()
+  --      require "user.copilot"
+  --    end, 100)
+  --  end,
+  --}
   use "RRethy/vim-illuminate"
   use "j-hui/fidget.nvim"
   use "lvimuser/lsp-inlayhints.nvim"
@@ -87,11 +84,11 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-emoji"
+  --use "hrsh7th/cmp-emoji"
   use "hrsh7th/cmp-nvim-lua"
-  use "zbirenbaum/copilot-cmp"
-  use { "tzachar/cmp-tabnine", commit = "1a8fd2795e4317fd564da269cc64a2fa17ee854e", 
-run = "./install.sh" }
+  --use "zbirenbaum/copilot-cmp"
+  --use { "tzachar/cmp-tabnine", commit = "1a8fd2795e4317fd564da269cc64a2fa17ee854e", 
+--run = "./install.sh" }
 
   -- Snippet
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -113,7 +110,7 @@ run = "./install.sh" }
   }
 
   -- Marks
-  use "christianchiarulli/harpoon"
+  --use "christianchiarulli/harpoon"
   --use "MattesGroeger/vim-bookmarks"
 
   -- Fuzzy Finder/Telescope
@@ -122,7 +119,7 @@ run = "./install.sh" }
   use "tom-anders/telescope-vim-bookmarks.nvim"
 
   -- Note Taking
-  use "mickael-menu/zk-nvim"
+  --use "mickael-menu/zk-nvim"
 
   -- Color
   use "NvChad/nvim-colorizer.lua"
@@ -136,12 +133,12 @@ run = "./install.sh" }
   -- use "lunarvim/colorschemes"
 
   -- Utility
-  use "rcarriga/nvim-notify"
+  --use "rcarriga/nvim-notify"
   use "stevearc/dressing.nvim"
-  use "ghillb/cybu.nvim"
-  use "moll/vim-bbye"
+  --use "ghillb/cybu.nvim"
+  --use "moll/vim-bbye"
   use "lewis6991/impatient.nvim"
-  use "lalitmee/browse.nvim"
+  --use "lalitmee/browse.nvim"
 
   -- Registers
   use "tversteeg/registers.nvim"
@@ -160,10 +157,10 @@ run = "./install.sh" }
   -- use "tiagovla/scope.nvim"
 
   -- Statusline
-  use "christianchiarulli/lualine.nvim"
+  --use "christianchiarulli/lualine.nvim"
 
   -- Startup
-  use "goolord/alpha-nvim"
+  --use "goolord/alpha-nvim"
 
   -- Indent
   use "lukas-reineke/indent-blankline.nvim"
@@ -174,14 +171,14 @@ run = "./install.sh" }
 
   -- Comment
   use "numToStr/Comment.nvim"
-  use "folke/todo-comments.nvim"
+  --use "folke/todo-comments.nvim"
 
   -- Terminal
   use "akinsho/toggleterm.nvim"
 
   -- Project
   use "ahmedkhalf/project.nvim"
-  use "windwp/nvim-spectre"
+  --use "windwp/nvim-spectre"
 
   -- Session
   use "rmagatti/auto-session"
@@ -209,27 +206,16 @@ run = "./install.sh" }
 
   -- Editing Support
   use "windwp/nvim-autopairs"
-  use "monaqa/dial.nvim"
-  use "nacro90/numb.nvim"
-  use "andymass/vim-matchup"
-  use "folke/zen-mode.nvim"
+  --use "monaqa/dial.nvim"
+  --use "nacro90/numb.nvim"
+  --use "andymass/vim-matchup"
+  --use "folke/zen-mode.nvim"
   -- use "Pocco81/true-zen.nvim"
   --use "karb94/neoscroll.nvim"
-  use "junegunn/vim-slash"
-
-  -- Motion
-  use "phaazon/hop.nvim"
-  -- use "jinh0/eyeliner.nvim"
-
-  -- Keybinding
-  --use "folke/which-key.nvim"
+  --use "junegunn/vim-slash"
 
   -- Java
   use "mfussenegger/nvim-jdtls"
-
-  -- Rust
-  use { "christianchiarulli/rust-tools.nvim", branch = "modularize_and_inlay_rewrite" }
-  use "Saecki/crates.nvim"
 
   -- Typescript TODO: set this up, also add keybinds to ftplugin
   use "jose-elias-alvarez/typescript.nvim"

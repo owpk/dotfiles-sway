@@ -51,7 +51,7 @@ alias hs="history | grep $1"
 alias supd="sudo pacman -Syyu"
 #alias aur="curl https://aur.archlinux.org/packages.gz | gzip -cd"
 #alias idea-ce="DRI_PRIME=1 idea"
-
+alias foo='echo $1'
 # ENV
 source $ZSH/oh-my-zsh.sh
 # source /usr/share/autojump/autojump.zsh
@@ -61,9 +61,9 @@ alias lls="ls -la --group-directories-first -h -S"
 alias ll="ls -la --group-directories-first -h"
 alias vim="nvim"
 alias jhelp="java -jar ~/gh/spar/jenkins-cli.jar -s http://jenkins.ctmol.ru/ -auth owpk:116a1bd02b33b7436257c0701c99beb08c build JOB $@"
-alias idea="nohup '$HOME/.local/share/JetBrains/Toolbox/scripts/idea $@' &"
-alias fleet="nohup '$HOME/.local/share/JetBrains/Toolbox/scripts/fleet $@' &"
-alias pycharm="nohup '$HOME/.local/share/JetBrains/Toolbox/scripts/pycharm $@' &"
+alias idea='nohup $HOME/.local/share/JetBrains/Toolbox/scripts/idea $@ &'
+alias fleet='nohup $HOME/.local/share/JetBrains/Toolbox/scripts/fleet $@ &'
+alias pycharm='nohup $HOME/.local/share/JetBrains/Toolbox/scripts/pycharm $@ &'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
