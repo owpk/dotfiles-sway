@@ -212,3 +212,5 @@
 	user = owpk
 [credential]
 	helper = cache --timeout=3600
+[protocol "file"]
+	allow = always
