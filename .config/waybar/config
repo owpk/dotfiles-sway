@@ -45,12 +45,9 @@
     },
 
     "clock": {
-        "tooltip-format": "{:%A %B %d %Y | %H:%M}",
-        //"format": " {:%a %d %b  %I:%M %p}",	//12 hour format
         "format": " {:%a %d %b  %H:%M}",	//24 hour format
         "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
-        //"timezones": [ "" ],
-        //"max-length": 200
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
         "interval": 1
     },
 
@@ -75,7 +72,7 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["", ""],
+        "format-icons": ["", "", ""],
         "on-scroll-down": "brightnessctl -c backlight set 5%",
         "on-scroll-up": "brightnessctl -c backlight set +5%"
     },
