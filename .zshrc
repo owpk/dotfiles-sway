@@ -28,14 +28,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#5e5e5e"
 CASE_SENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# BINDINGS
-bindkey '^ ' autosuggest-accept
-
 # PLUGS
 plugins=(
    zsh-autosuggestions
 	 archlinux
 )
+
 
 # ALIASES
 alias cfg="cd ~/.config"
@@ -73,3 +71,6 @@ export DOTIFLES_ROOT="$HOME/dotfiles-sway"
 ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh"  ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# BINDINGS
+bindkey '^ ' autosuggest-accept
