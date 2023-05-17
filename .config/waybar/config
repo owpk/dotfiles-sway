@@ -163,7 +163,7 @@
     },
 
     "custom/vnc": {
-         "format": "🖥{}",
+         "format": "💻 {}",
          "exec": "$HOME/.config/sway/scripts/vnc_server.sh",
          "on-click": "$HOME/.config/sway/scripts/vnc_server.sh $(cat /tmp/VNC_CHANGE_STATE_VAR)",
 
