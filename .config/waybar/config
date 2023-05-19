@@ -45,12 +45,9 @@
     },
 
     "clock": {
-        "tooltip-format": "{:%A %B %d %Y | %H:%M}",
-        //"format": " {:%a %d %b  %I:%M %p}",	//12 hour format
         "format": " {:%a %d %b  %H:%M}",	//24 hour format
         "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
-        //"timezones": [ "" ],
-        //"max-length": 200
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>",
         "interval": 1
     },
 
@@ -75,23 +72,25 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["", ""],
+        "format-icons": ["", "", ""],
         "on-scroll-down": "brightnessctl -c backlight set 5%",
         "on-scroll-up": "brightnessctl -c backlight set +5%"
     },
 
     "battery": {
+        "interval": 30,
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
+        "format-charging": " {capacity}%",
         "format": "{icon}  {capacity}%",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
     },
 
      "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format": "⚠ Disabled",
         "format-wifi": " ",
         "format-ethernet": " {ifname}",
@@ -164,7 +163,7 @@
     },
 
     "custom/vnc": {
-         "format": "🖥{}",
+         "format": "💻 {}",
          "exec": "$HOME/.config/sway/scripts/vnc_server.sh",
          "on-click": "$HOME/.config/sway/scripts/vnc_server.sh $(cat /tmp/VNC_CHANGE_STATE_VAR)",
 

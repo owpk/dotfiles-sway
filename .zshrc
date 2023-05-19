@@ -1,6 +1,11 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
+function diskUsage() {
+    du --max-depth=1 -h $@ | sort -hr
+}
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -28,14 +33,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#5e5e5e"
 CASE_SENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# BINDINGS
-bindkey '^ ' autosuggest-accept
-
 # PLUGS
 plugins=(
    zsh-autosuggestions
 	 archlinux
 )
+
 
 # ALIASES
 alias cfg="cd ~/.config"
@@ -49,9 +52,8 @@ alias dckd="sudo systemctl start docker"
 alias dckds="sudo systemctl stop docker"
 alias hs="history | grep $1"
 alias supd="sudo pacman -Syyu"
-#alias aur="curl https://aur.archlinux.org/packages.gz | gzip -cd"
-#alias idea-ce="DRI_PRIME=1 idea"
-alias foo='echo $1'
+alias du=diskUsage
+
 # ENV
 source $ZSH/oh-my-zsh.sh
 # source /usr/share/autojump/autojump.zsh
@@ -61,9 +63,9 @@ alias lls="ls -la --group-directories-first -h -S"
 alias ll="ls -la --group-directories-first -h"
 alias vim="nvim"
 alias jhelp="java -jar ~/gh/spar/jenkins-cli.jar -s http://jenkins.ctmol.ru/ -auth owpk:116a1bd02b33b7436257c0701c99beb08c build JOB $@"
-alias idea='nohup $HOME/.local/share/JetBrains/Toolbox/scripts/idea $@ &'
-alias fleet='nohup $HOME/.local/share/JetBrains/Toolbox/scripts/fleet $@ &'
-alias pycharm='nohup $HOME/.local/share/JetBrains/Toolbox/scripts/pycharm $@ &'
+alias idea="$HOME/.local/share/JetBrains/Toolbox/scripts/idea $@"
+alias fleet="$HOME/.local/share/JetBrains/Toolbox/scripts/fleet $@"
+alias pycharm="$HOME/.local/share/JetBrains/Toolbox/scripts/pycharm $@"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -73,3 +75,6 @@ export DOTIFLES_ROOT="$HOME/dotfiles-sway"
 ##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh"  ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# BINDINGS
+bindkey '^ ' autosuggest-accept

@@ -11,7 +11,9 @@ gaps outer 0
 default_border pixel 5
 
 # Default Font
-font pango:Noto Sans Regular 10
+# font pango:Noto Sans Regular 10
+# font pango:SourceCodePro Medium 11
+font pango:Hack Medium 11
 
 # Thin borders:
 smart_borders on

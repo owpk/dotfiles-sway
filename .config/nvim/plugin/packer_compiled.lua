@@ -129,14 +129,6 @@ _G.packer_plugins = {
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/colortils.nvim",
     url = "https://github.com/nvim-colortils/colortils.nvim"
   },
-  ["copilot.lua"] = {
-    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17user.copilot\frequire-\1\0\4\0\3\0\0066\0\0\0009\0\1\0003\2\2\0)\3d\0B\0\3\1K\0\1\0\0\rdefer_fn\bvim\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/owpk/.local/share/nvim/site/pack/packer/opt/copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
-  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
@@ -273,6 +265,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/owpk/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
     url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/owpk/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -439,10 +436,6 @@ vim.cmd [[au!]]
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au VimEnter * ++once lua require("packer.load")({'copilot.lua'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
