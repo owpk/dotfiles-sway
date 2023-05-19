@@ -19,6 +19,12 @@ font pango:Hack Medium 11
 smart_borders on
 smart_gaps off
 
+smart_corner_radius disable
+corner_radius 5
+shadows enable
+shadows_on_csd enable
+shadow_blur_radius 20
+
 # Set wallpaper w azote:
 exec ~/.azotebg
 
