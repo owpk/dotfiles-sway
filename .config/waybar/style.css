@@ -18,24 +18,24 @@
 
 window#waybar {
     background: alpha(@bg, 0.9);
-		border-radius: 5;
+	border-radius: 5;
     /* background-color: rgba(100, 100, 100, 0); */
     transition-property: background-color;
     transition-duration: .5s;
-		margin-top: 8;
+	margin-top: 8;
     padding: 2 2;
-	}
+}
 
 tooltip {
-     background: rgba(43, 48, 59, 0.95);
-     border: 1px solid rgba(100, 114, 125, 0.8);
-     border-radius: 7px;
-     border-color: shade(alpha(@borders, 0.9), 2.25);
+    background: rgba(43, 48, 59, 0.95);
+    border: 1px solid rgba(100, 114, 125, 0.8);
+    border-radius: 7px;
+    border-color: shade(alpha(@borders, 0.9), 2.25);
 }
 
 #workspaces {
-   padding: 0px;
-   margin: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #workspaces button {
