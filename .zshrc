@@ -42,11 +42,7 @@ plugins=(
 
 # ALIASES
 alias cfg="cd ~/.config"
-# alias aur="cd ~/hm/AUR"
-alias psqld="sudo systemctl start postgresql"
 alias gmvn="mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4"
-alias pclip="xclip"
-alias gclip="xclip -o"
 alias awmenu="curl -s https://raw.githubusercontent.com/wstam88/rofi-fontawesome/master/icon-list.txt | wofi --dmenu -i -markup-rows -p "" -columns 6 -width 100 -location 1 -lines 20 -bw 2 -yoffset -2 | cut -d\' -f2"
 alias dckd="sudo systemctl start docker"
 alias dckds="sudo systemctl stop docker"
