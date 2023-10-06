@@ -14,8 +14,13 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 # Idle settings
 exec swayidle -w \
-  timeout 600 'swaymsg "output * dpms off"' \
-  resume 'swaymsg "output * dpms on"'
+		timeout 500 'swaymsg "output * dpms off"' \
+		    resume 'swaymsg "output * dpms on"' \
+        timeout 700 'systemctl suspend'
+
+# exec swayidle -w \
+#   timeout 500 'swaymsg "output * dpms off"' \
+#   resume 'swaymsg "output * dpms on"'
 
 for_window [class=".*"] inhibit_idle fullscreen
 for_window [app_id=".*"] inhibit_idle fullscreen

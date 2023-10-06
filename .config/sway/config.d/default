@@ -23,18 +23,7 @@ set $menu wofi -c ~/.config/wofi/config -I
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 
-### Idle configuration
-# exec swayidle -w\
-#    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
-#    timeout 770 'swaymsg "output * dpms off"' \
-#    resume 'swaymsg "output * dpms on"' \
-#    before-sleep 'swaylock -C ~/.config/swaylock/config'
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
-
 ### Key bindings
-
 ## reload
 bindsym --to-code  {
    $mod+f1                   reload
@@ -46,7 +35,7 @@ bindsym --to-code  {
 
    $mod+Shift+Tab     			workspace next
    $mod+backslash     			workspace back_and_forth
-   $mod+Tab           			exec /bin/python3 ~/.config/wofi/windows.py
+   alt+Tab           			exec rofi -show window
 
    # Start a floating terminal
    $mod+Return        			exec $term
