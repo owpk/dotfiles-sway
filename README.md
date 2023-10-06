@@ -1,3 +1,6 @@
+!!! THIS REPOSITORY IS NO LONGER MAINTAINED AND MOVED TO https://github.com/owpk/dotfiles-swayfx  
+I moved to swayfx fork (https://github.com/WillPower3309/swayfx) all settings and scripts just the same as this one but with some minor bug fixes i lazy to apply here
+
 - SEE .config/sway/config.d/input TO CHANGE KEYBOARD LAYOUT AND OTHER KB SETTINGS
 - SEE .config/sway/config.d/default TO CHANGE KEY BINDINGS CONFIG
 
