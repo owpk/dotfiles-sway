@@ -1,31 +1,32 @@
-!!! THIS REPOSITORY IS NO LONGER MAINTAINED AND MOVED TO https://github.com/owpk/dotfiles-swayfx  
+## !!! THIS REPOSITORY IS NO LONGER MAINTAINED AND MOVED TO https://github.com/owpk/dotfiles-swayfx  
 I moved to swayfx fork (https://github.com/WillPower3309/swayfx) all settings and scripts just the same as this one but with some minor bug fixes i lazy to apply here
 
+## My dotfiles for Sway
+
+- press ```Win + p``` to show keybindigs help
+- press ```Win + Shift + p``` to toggle keybindigs help 
 - SEE .config/sway/config.d/input TO CHANGE KEYBOARD LAYOUT AND OTHER KB SETTINGS
 - SEE .config/sway/config.d/default TO CHANGE KEY BINDINGS CONFIG
 
 <p align="center">
-   <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc.jpg"/>
+   <img src="https://github.com/owpk/dotfiles-sway/blob/master/docs/sc.gif"/>
 </p>
 <p align="center">
-   <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc_wbg.png"/>
-</p>
-<p align="center">
-   <img src="https://github.com/owpk/dotfiles-sway/blob/master/sc.gif"/>
+   <img src="https://github.com/owpk/dotfiles-sway/blob/master/docs/composed.jpg"/>
 </p>
 
 # Install for arch linux (copy and paste to terminal)
 
 1. install all needed apps
 ```
-sudo pacman -S --needed swaybg jq cmake cmocka sway ranger wofi waybar \
-reflector mtools vim neovim zsh vifm \
-papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard \
-translate-shell slurp grim light pamixer wmname dmenu xdg-desktop-portal \
-kanshi gnome-keyring alacritty kitty pavucontrol playerctl imv mpv wayvnc pkcs11-helper 
+sudo pacman -S --needed swaybg jq cmake cmocka ranger wofi waybar mtools vim neovim zsh \
+vifm papirus-icon-theme noto-fonts-emoji ttf-hack wl-clipboard translate-shell slurp \
+grim light pamixer wmname dmenu xdg-desktop-portal kanshi alacritty \
+kitty pavucontrol playerctl imv mpv wayvnc pkcs11-helper nodejs 
+
 sudo usermod -a -G video $USER
 ```
-2. clone dotfiles
+2. clone dotfiles and change directory
 ```
 git clone https://github.com/owpk/dotfiles-sway
 cd dotfiles-sway
@@ -34,20 +35,15 @@ cd dotfiles-sway
 ```
 chsh -s /bin/zsh $USER
 ```
-4. install zsh utils
-- type exit when ohmyzsh will be installed (first plugin)
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-5. create all needed links and copy fonts
+4. create all needed links and copy fonts
 ```
 sudo mkdir /usr/share/fonts/TTF 2> /dev/null
 sudo cp ./fonts/* /usr/share/fonts/TTF/
 fc-cache
+mv ~/.zshenv ~/.zshenv.bak 2> /dev/null
+ln -s `pwd`/.zshenv ~/.zshenv
 mv ~/.zshrc ~/.zshrc.bak 2> /dev/null
-ln -s `pwd`/.zshrc ~/.zshrc
+ln -s `pwd`/.config/zsh/.zshrc ~/.zshrc
 mv ~/.p10k.zsh ~/.p10k.zsh.bak 2> /dev/null
 ln -s `pwd`/.p10k.zsh ~/.p10k.zsh
 mv ~/.config ~/.config.bak 2> /dev/null
@@ -56,7 +52,7 @@ mv ~/.vim ~/.vim.bak 2> /dev/null
 ln -s `pwd`/.vim ~/.vim
 ```
 
-6. install 'aura'
+5. install 'aura'
 
 ```
 git clone https://aur.archlinux.org/aura-bin.git
@@ -65,33 +61,21 @@ makepkg
 sudo pacman -U *.tar.zst
 ```
 
-7. install menus/toolbars/utils etc for sway
- - install last app if you have networkmanager installed
+6. install menus/toolbars/utils etc for sway
+ - use ```gpg --receive-keys``` if any errors occures
 ```
-sudo aura -A wob
+sudo aura -A avizo
 sudo aura -A nwg-launchers
+sudo aura -A nwg-wrapper
 sudo aura -A wlsunset
+sudo aura -A sworkstyle
 sudo aura -A azote
-sudo aura -A networkmanager-dmenu-git
 ```
 
-7.1. (Optional) install ranger devicons
+6.1. (Optional) install ranger devicons
 ```
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
-8. run sway (from terminal) to ensure if everything is ok and reboot system
-```
-sway
-reboot
-```
-
-9. change background image 
-```
-pkill swaybg
-MONITOR="$(swaymsg -t get_outputs | jq -r '.[] | {name} | (.name)')"
-nohup swaybg -o $MONITOR -i "$HOME/dotfiles-sway/wallpapers/wp.png" -m fill &
-```
- - or use 'azote' app to do the same as above 😺  
 
 # useful links
 - [sway wm](https://github.com/swaywm/sway)
